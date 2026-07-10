@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>大V观点聚合看板 · 实时追踪</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --ink:#1f2733; --muted:#6b7785;
+    --line:#e6eaf0; --brand:#2563eb; --brand-soft:#eef3ff;
+    --bull:#d93025;      /* 偏多=红（A股习惯） */
+    --bear:#1a9e5f;      /* 偏空=绿 */
+    --struct:#d98324;    /* 结构性=橙 */
+    --neutral:#5b6b7d;
+    --gold:#b8860b;
+    --shadow:0 1px 3px rgba(16,24,40,.06),0 6px 18px rgba(16,24,40,.05);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px;}
+  header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:8px;}
+  h1{font-size:26px;margin:0;letter-spacing:.5px;}
+  h1 .em{font-size:30px;}
+  .sub{color:var(--muted);font-size:13px;margin-top:4px;}
+  .updated{font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:6px 12px;border-radius:999px;white-space:nowrap;}
+  .updated b{color:var(--brand);}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:14px 0 6px;}
+  .legend i{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:middle;}
+  .dot-bull{background:var(--bull)} .dot-bear{background:var(--bear)} .dot-struct{background:var(--struct)} .dot-neutral{background:var(--neutral)}
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 22px;}
+  .filters button{border:1px solid var(--line);background:var(--card);color:var(--muted);padding:7px 14px;border-radius:999px;font-size:13px;cursor:pointer;transition:.15s;}
+  .filters button:hover{border-color:var(--brand);color:var(--brand);}
+  .filters button.active{background:var(--brand);border-color:var(--brand);color:#fff;}
+  section{margin:38px 0 0;}
+  .sec-title{font-size:19px;font-weight:700;margin:0 0 4px;display:flex;align-items:center;gap:9px;}
+  .sec-title .bar{width:5px;height:20px;border-radius:3px;background:var(--brand);display:inline-block;}
+  .sec-desc{color:var(--muted);font-size:13px;margin:0 0 18px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column;}
+  .card .hd{display:flex;align-items:center;gap:11px;}
+  .card .ava{width:42px;height:42px;border-radius:12px;background:var(--brand-soft);display:flex;align-items:center;justify-content:center;font-size:22px;flex:none;}
+  .card .nm{font-weight:700;font-size:15.5px;line-height:1.25;}
+  .card .al{color:var(--muted);font-size:11.5px;margin-top:1px;}
+  .card .meta{margin-left:auto;text-align:right;font-size:11px;color:var(--muted);flex:none;}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 10px;}
+  .tag{font-size:11px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted);}
+  .tag.stance{color:#fff;border:none;font-weight:600;}
+  .s-bull{background:var(--bull)} .s-bear{background:var(--bear)} .s-struct{background:var(--struct)} .s-neutral{background:var(--neutral)}
+  .tag.cred{background:#fff7e6;color:var(--gold);border-color:#f0dca6;}
+  .summary{font-size:13.5px;color:#2c3644;margin:2px 0 10px;}
+  .hl{margin:0 0 10px;padding-left:0;list-style:none;font-size:12.8px;color:#3a4654;}
+  .hl li{position:relative;padding-left:16px;margin:5px 0;}
+  .hl li::before{content:"▹";position:absolute;left:0;color:var(--brand);}
+  .ret{background:#fafbfc;border:1px dashed var(--line);border-radius:10px;padding:9px 11px;font-size:12px;color:var(--muted);margin-bottom:10px;}
+  .ret b{color:var(--ink);}
+  .dirs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;}
+  .dir{font-size:11px;background:var(--brand-soft);color:var(--brand);padding:3px 9px;border-radius:8px;}
+  .src{font-size:11px;color:var(--muted);margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+  .src a{color:var(--brand);text-decoration:none;}
+  .src a:hover{text-decoration:underline;}
+  /* directions */
+  .dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px;}
+  .dcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 16px;box-shadow:var(--shadow);}
+  .dcard h3{margin:0 0 8px;font-size:15px;}
+  .dcard .sup{font-size:11.5px;color:var(--muted);margin-bottom:8px;}
+  .chip{display:inline-block;font-size:11px;background:#eef3ff;color:var(--brand);border-radius:7px;padding:2px 8px;margin:2px 4px 2px 0;}
+  .dcard .risk{font-size:12px;color:#b54708;background:#fff4ec;border-radius:8px;padding:7px 10px;margin-top:8px;}
+  .dcard .note{font-size:12px;color:var(--muted);margin-top:7px;}
+  /* rules */
+  .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .rcol{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);}
+  .rcol h3{margin:0 0 12px;font-size:15.5px;display:flex;align-items:center;gap:8px;}
+  .rcol.buy h3{color:var(--bull)} .rcol.sell h3{color:var(--bear)} .rcol.pos h3{color:var(--brand)}
+  .rcol ol{margin:0;padding-left:20px;font-size:13px;color:#33404e;}
+  .rcol ol li{margin:9px 0;}
+  /* checklist */
+  .check{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);}
+  .check .row{display:flex;align-items:flex-start;gap:11px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px;}
+  .check .row:last-child{border-bottom:none;}
+  .check input{margin-top:4px;width:17px;height:17px;flex:none;accent-color:var(--brand);cursor:pointer;}
+  .check .grp{font-size:12px;font-weight:700;color:var(--muted);margin:14px 0 2px;letter-spacing:.5px;}
+  .progress{font-size:12.5px;color:var(--muted);margin-bottom:6px;}
+  .progress b{color:var(--brand);}
+  .reset{font-size:12px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:8px;padding:4px 10px;cursor:pointer;}
+  .reset:hover{border-color:var(--brand);color:var(--brand);}
+  .disclaimer{margin-top:34px;background:#fffbe9;border:1px solid #f3e2a8;border-radius:12px;padding:14px 16px;font-size:12.5px;color:#7a5b00;line-height:1.7;}
+  /* 时间日历 */
+  .cal{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0 18px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;box-shadow:var(--shadow);}
+  .cal-label{font-size:12.5px;color:var(--muted);margin-right:4px;}
+  .cal-chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:12.5px;cursor:pointer;transition:.15s;font-variant-numeric:tabular-nums;}
+  .cal-chip:hover{border-color:var(--brand);color:var(--brand);}
+  .cal-chip.active{background:var(--brand);border-color:var(--brand);color:#fff;}
+  .cal-dot{color:#1a9e5f;font-size:9px;vertical-align:middle;margin-left:2px;}
+  .cal-today{font-size:10px;background:#fff7e6;color:var(--gold);border-radius:6px;padding:1px 5px;margin-left:3px;}
+  .cal-chip.active .cal-today{background:rgba(255,255,255,.25);color:#fff;}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px;}
+  .tab-btn{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 18px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:.15s;box-shadow:var(--shadow);}
+  .tab-btn:hover{border-color:var(--brand);color:var(--brand);}
+  .tab-btn.active{background:var(--brand);border-color:var(--brand);color:#fff;}
+  .hidden{display:none!important;}
+  /* daily summary */
+  .daily{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow);}
+  .daily .ttl{font-size:17px;font-weight:700;margin:0 0 8px;}
+  .daily .meta-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:12px;font-size:12px;color:var(--muted);}
+  .daily .art{white-space:pre-wrap;font-size:13.5px;line-height:1.9;color:#2c3644;background:#fafbfc;border:1px solid var(--line);border-radius:10px;padding:16px 18px;max-height:480px;overflow:auto;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;}
+  .daily .btns{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;}
+  .btn{border:1px solid var(--brand);background:var(--brand);color:#fff;padding:8px 16px;border-radius:9px;font-size:13px;cursor:pointer;}
+  .btn.ghost{background:#fff;color:var(--brand);}
+  .btn:hover{opacity:.9;}
+  .daily .hint{font-size:11.5px;color:var(--muted);margin-top:8px;min-height:16px;}
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:34px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1><span class="em">📡</span> 大V观点聚合看板</h1>
+      <div class="sub">国内外财经博主最新言论 · 浓缩呈现 · 提炼投资方向与买卖纪律</div>
+    </div>
+    <div class="updated">数据快照：<b id="upd">—</b> · 自动刷新已配置</div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab-btn active" data-mod="1">📡 大V观点看板</button>
+    <button class="tab-btn" data-mod="2">📰 每日汇总文章</button>
+    <button class="tab-btn" data-mod="3">📊 股票基金分析</button>
+  </nav>
+
+  <div class="legend">
+    <span><i class="dot-bull"></i>偏多（看多）</span>
+    <span><i class="dot-bear"></i>偏空（看空/谨慎）</span>
+    <span><i class="dot-struct"></i>结构性（分化/精选）</span>
+    <span><i class="dot-neutral"></i>中性</span>
+  </div>
+
+  <div class="filters" id="filters">
+    <button data-f="all" class="active">全部</button>
+    <button data-f="偏多">偏多</button>
+    <button data-f="偏空">偏空</button>
+    <button data-f="结构性">结构性</button>
+    <button data-f="国内">国内</button>
+    <button data-f="国际">国际</button>
+  </div>
+
+  <div class="module" id="mod1">
+  <div class="cal" id="cal1"></div>
+  <!-- 1. 观点流 -->
+  <section>
+    <div class="sec-title"><span class="bar"></span>大V最新观点（已浓缩）</div>
+    <p class="sec-desc">每条都提炼了核心逻辑、关键要点与收益/可信度标注。点来源可跳原文。</p>
+    <div class="grid" id="feed"></div>
+  </section>
+
+  <!-- 2. 投资方向 -->
+  <section>
+    <div class="sec-title"><span class="bar"></span>按他们的逻辑，推荐关注的方向</div>
+    <p class="sec-desc">把多位大V的主线交叉对照，重合度越高的方向确定性越强（但仍需你独立判断）。</p>
+    <div class="dgrid" id="dirs"></div>
+  </section>
+
+  <!-- 3. 买卖规则 -->
+  <section>
+    <div class="sec-title"><span class="bar"></span>买卖规则框架（专治"不知道何时买卖"）</div>
+    <p class="sec-desc">下方规则由大V公开逻辑 + 通用纪律框架提炼，作为你下单前的对照清单。</p>
+    <div class="rules" id="rules"></div>
+  </section>
+
+  <!-- 4. 自查清单 -->
+  <section>
+    <div class="sec-title"><span class="bar"></span>买卖前自查清单</div>
+    <p class="sec-desc">每次准备买入/卖出前过一遍。勾选状态会自动保存在本机浏览器。</p>
+    <div class="check" id="check"></div>
+  </section>
+  </div><!-- /mod1 -->
+
+  <div class="module" id="mod2">
+  <div class="cal" id="cal2"></div>
+  <!-- 5. 每日汇总 -->
+  <section>
+    <div class="sec-title"><span class="bar"></span>每日汇总 · 大V观点文章</div>
+    <p class="sec-desc">每天下午自动汇总所有大V观点、生成一篇可直接发支付宝/朋友圈的短文。点"复制全文"即可粘贴发布（已尽量去掉AI腔）。</p>
+    <div class="daily" id="daily">
+      <div class="ttl" id="dailyTitle">—</div>
+      <div class="meta-row"><span id="dailyDate"></span><span>自动更新：每天 14:30</span></div>
+      <div class="art" id="dailyArt"></div>
+      <div class="btns">
+        <button class="btn" id="copyArt">复制全文</button>
+        <button class="btn ghost" id="regenArt">用当前数据重新生成草稿</button>
+      </div>
+      <div class="hint" id="copyHint"></div>
+    </div>
+  </section>
+  </div><!-- /mod2 -->
+
+  <div class="module hidden" id="mod3">
+  <!-- 6. 股票基金分析 占位 -->
+  <section>
+    <div class="sec-title"><span class="bar"></span>股票 / 基金分析（开发中）</div>
+    <p class="sec-desc">录入基金名称、金额、当前收益，点"分析"即获得后续情形推演与操作建议。此模块将独立开发，先看模块一、模块二。</p>
+    <div class="daily" style="text-align:center;padding:42px 20px;color:var(--muted);">
+      <div style="font-size:46px;margin-bottom:10px;">🛠️</div>
+      <div style="font-size:15px;font-weight:700;color:var(--ink);margin-bottom:8px;">模块三 · 敬请期待</div>
+      <div style="font-size:13px;max-width:540px;margin:0 auto;line-height:1.85;">后续将支持：录入一只基金 / 股票（名称 + 金额 + 持仓收益）→ 自动拉取公开净值 / 行情 → 给出后续情景推演、风险提示与持有 / 买卖建议。当前先看模块一（大V观点看板）与模块二（每日汇总文章）。</div>
+    </div>
+  </section>
+  </div><!-- /mod3 -->
+
+  <div class="disclaimer" id="disc">—</div>
+
+  <footer>本看板由 WorkBuddy 生成 · 仅为信息聚合与教育参考，不构成投资建议</footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function(){
+  var D = window.DASHBOARD_DATA;
+  if(!D){ document.getElementById('feed').innerHTML='<p style="color:#b54708">数据未加载，请确认 data.js 与本页面在同一目录，并通过本地服务器或预览面板打开。</p>'; return; }
+  document.getElementById('upd').textContent = D.updated;
+  document.getElementById('disc').textContent = D.disclaimer;
+
+  // ---- 模块切换 ----
+  var tabs=document.getElementById('tabs');
+  if(tabs){
+    tabs.addEventListener('click', function(e){
+      var b=e.target.closest('.tab-btn'); if(!b) return;
+      var m=b.getAttribute('data-mod');
+      document.querySelectorAll('.tab-btn').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      document.querySelectorAll('.module').forEach(function(el){
+        el.classList.toggle('hidden', el.id!=='mod'+m);
+      });
+    });
+  }
+
+  var stanceClass = {"偏多":"s-bull","偏空":"s-bear","结构性":"s-struct","中性":"s-neutral"};
+
+  // ---- 时间日历 / 历史快照 ----
+  var RET = D.retentionDays || 7;
+  var HIST = D.history || [];
+  var todayStr = (function(){ var n=new Date(); return n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0'); })();
+  var viewDate = todayStr;
+  var curFilter = 'all';
+
+  function historyEntry(date){ for(var i=0;i<HIST.length;i++){ if(HIST[i].date===date) return HIST[i]; } return null; }
+  function availableDates(){
+    var set={}, arr=[todayStr]; set[todayStr]=1;
+    HIST.forEach(function(h){ if(!set[h.date]){ set[h.date]=1; arr.push(h.date); } });
+    arr.sort(function(a,b){ return a<b?1:-1; });
+    return arr.slice(0, RET);
+  }
+  function getSnapshot(date){
+    var e = historyEntry(date);
+    if(e) return { influencers: e.influencers||D.influencers, dailyArticle: e.dailyArticle||D.dailyArticle, fromHistory:true };
+    return { influencers: D.influencers, dailyArticle: D.dailyArticle, fromHistory:false };
+  }
+  function renderCalendar(cid){
+    var box=document.getElementById(cid); if(!box) return;
+    var dates=availableDates(); var html='<span class="cal-label">📅 回看日期：</span>';
+    dates.forEach(function(d){
+      var e=historyEntry(d);
+      var hasArt = e && e.dailyArticle && e.dailyArticle.text;
+      var active=(d===viewDate)?' active':'';
+      var dot=hasArt?' <span class="cal-dot">●</span>':'';
+      var tag=(d===todayStr)?' <span class="cal-today">最新</span>':'';
+      html+='<button class="cal-chip'+active+'" data-date="'+d+'">'+d.slice(5)+dot+tag+'</button>';
+    });
+    box.innerHTML=html;
+    box.querySelectorAll('.cal-chip').forEach(function(b){
+      b.addEventListener('click', function(){
+        viewDate=b.getAttribute('data-date');
+        renderCalendar('cal1'); renderCalendar('cal2'); renderFeed(); renderDaily();
+      });
+    });
+  }
+
+  // ---- 观点流 ----
+  function renderFeed(){
+    var feed=document.getElementById('feed'); feed.innerHTML='';
+    getSnapshot(viewDate).influencers.forEach(function(p){
+    var el = document.createElement('div');
+    el.className='card';
+    el.setAttribute('data-stance', p.stance);
+    el.setAttribute('data-region', p.region);
+    var hl = (p.highlights||[]).map(function(h){return '<li>'+h+'</li>';}).join('');
+    var dirs = (p.directions||[]).map(function(d){return '<span class="dir">'+d+'</span>';}).join('');
+    el.innerHTML =
+      '<div class="hd"><div class="ava">'+p.emoji+'</div>'+
+        '<div><div class="nm">'+p.name+'</div><div class="al">'+p.alias+'</div></div>'+
+        '<div class="meta">'+p.platform+'<br>'+p.region+'</div></div>'+
+      '<div class="tags"><span class="tag stance '+(stanceClass[p.stance]||'s-neutral')+'">'+p.stance+'</span>'+
+        '<span class="tag">'+p.theme+'</span>'+
+        '<span class="tag cred">可信度 '+p.credibility+'</span></div>'+
+      '<div class="summary">'+p.summary+'</div>'+
+      '<ul class="hl">'+hl+'</ul>'+
+      '<div class="ret"><b>收益/标注：</b>'+p.returnNote+'</div>'+
+      '<div class="dirs">'+dirs+'</div>'+
+      '<div class="src"><span>'+p.date+' · '+p.source+'</span>'+
+        (p.sourceUrl?'<a href="'+p.sourceUrl+'" target="_blank" rel="noopener">看原文 ↗</a>':'')+'</div>';
+    feed.appendChild(el);
+  });
+  applyFilter();
+  }
+
+  // ---- 筛选 ----
+  function applyFilter(){
+    var f=curFilter;
+    document.querySelectorAll('#feed .card').forEach(function(c){
+      var ok = (f==='all') || c.getAttribute('data-stance')===f || c.getAttribute('data-region')===f;
+      c.classList.toggle('hidden', !ok);
+    });
+  }
+  document.getElementById('filters').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    var f = b.getAttribute('data-f'); curFilter=f;
+    document.querySelectorAll('#filters button').forEach(function(x){x.classList.remove('active');});
+    b.classList.add('active');
+    applyFilter();
+  });
+
+  // ---- 方向 ----
+  var dg = document.getElementById('dirs');
+  D.directions.forEach(function(d){
+    var el = document.createElement('div'); el.className='dcard';
+    var sup = (d.supporters||[]).map(function(s){return '<span class="chip">'+s+'</span>';}).join('');
+    el.innerHTML = '<h3>'+d.name+'</h3><div class="sup">支持大V：'+sup+'</div>'+
+      '<div class="note">'+d.note+'</div>'+
+      '<div class="risk">⚠ 风险：'+d.risk+'</div>';
+    dg.appendChild(el);
+  });
+
+  // ---- 规则 ----
+  var rg = document.getElementById('rules');
+  var cols = [
+    {k:'buy', t:'🟢 买入信号', c:'buy'},
+    {k:'sell', t:'🔴 卖出信号', c:'sell'},
+    {k:'position', t:'🔵 仓位管理', c:'pos'}
+  ];
+  cols.forEach(function(col){
+    var el=document.createElement('div'); el.className='rcol '+col.c;
+    var items=(D.rules[col.k]||[]).map(function(x){return '<li>'+x+'</li>';}).join('');
+    el.innerHTML='<h3>'+col.t+'</h3><ol>'+items+'</ol>';
+    rg.appendChild(el);
+  });
+
+  // ---- 自查清单 ----
+  var checklist = [
+    {g:'买入前', items:[
+      '这只标的通过"封仓十年"测试（10年后还在、还赚钱）？',
+      '用的是闲钱，且没加任何杠杆？',
+      '计划仓位已分成≥3笔，单笔不超过1/3，没一次满仓？',
+      '从未来10年看，当前价格是"好价格"而非追高？',
+      '要么是产业核心龙头，要么通过"真需求/硬供给/低关注/强价值捕获"四因子初筛？',
+      '单股≤15%、单行业≤40%，不超限？'
+    ]},
+    {g:'卖出前', items:[
+      '卖出理由是"逻辑变了/买错了"，而不是单纯因为跌？',
+      '浮盈是否已达目标（+50%~100%），该分批止盈收回本金？',
+      '是否因仓位超限（单股>15%/单行业>40%）必须减？',
+      '持有的产业链环节是否连续2季业绩不及预期？',
+      '是否到了季度/半年度再平衡时点（被动高抛低吸）？'
+    ]}
+  ];
+  var ck=document.getElementById('check');
+  var total=0; checklist.forEach(function(g){total+=g.items.length;});
+  var prog=document.createElement('div'); prog.className='progress'; ck.appendChild(prog);
+  var saved = {}; try{ saved = JSON.parse(localStorage.getItem('dv_checklist')||'{}'); }catch(e){}
+  checklist.forEach(function(g){
+    var gh=document.createElement('div'); gh.className='grp'; gh.textContent=g.g; ck.appendChild(gh);
+    g.items.forEach(function(it){
+      var row=document.createElement('label'); row.className='row';
+      var cb=document.createElement('input'); cb.type='checkbox'; cb.value=it;
+      if(saved[it]) cb.checked=true;
+      cb.addEventListener('change', function(){
+        saved[it]=cb.checked; localStorage.setItem('dv_checklist', JSON.stringify(saved)); updateProg();
+      });
+      var span=document.createElement('span'); span.textContent=it;
+      row.appendChild(cb); row.appendChild(span); ck.appendChild(row);
+    });
+  });
+  var reset=document.createElement('button'); reset.className='reset'; reset.textContent='清空勾选';
+  reset.style.marginTop='10px';
+  reset.addEventListener('click', function(){ localStorage.removeItem('dv_checklist'); document.querySelectorAll('#check input').forEach(function(c){c.checked=false;}); updateProg(); });
+  ck.appendChild(reset);
+  function updateProg(){
+    var n=document.querySelectorAll('#check input:checked').length;
+    prog.innerHTML='已确认 <b>'+n+'</b> / '+total+' 项 · '+(n===total?'✅ 可以动手了':'还需确认 '+(total-n)+' 项');
+  }
+  updateProg();
+
+  // ---- 每日汇总 ----
+  function renderDaily(){
+    var snap=getSnapshot(viewDate);
+    var da = snap.dailyArticle || {};
+    var ttl = da.title || '（暂无，点"重新生成草稿"生成）';
+    if(snap.fromHistory) ttl = '📜 '+ttl+'（历史快照）';
+    document.getElementById('dailyTitle').textContent = ttl;
+    var dt = da.date ? ('日期：'+da.date) : '';
+    if(snap.fromHistory) dt += (dt?' · ':'')+'历史快照（只读）';
+    document.getElementById('dailyDate').textContent = dt;
+    document.getElementById('dailyArt').textContent = da.text || '（暂无内容）';
+  }
+
+  function copyText(t){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(function(){flash('✅ 已复制到剪贴板，去支付宝粘贴即可。');},
+        function(){fallbackCopy(t);});
+    } else { fallbackCopy(t); }
+  }
+  function fallbackCopy(t){
+    var ta=document.createElement('textarea'); ta.value=t; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    try{ document.execCommand('copy'); flash('✅ 已复制到剪贴板，去支付宝粘贴即可。'); }
+    catch(e){ flash('⚠️ 复制失败，请手动长按选择文本复制。'); }
+    ta.remove();
+  }
+  function flash(msg){ document.getElementById('copyHint').textContent = msg; }
+
+  document.getElementById('copyArt').addEventListener('click', function(){
+    var snap=getSnapshot(viewDate);
+    var t = (snap.dailyArticle && snap.dailyArticle.text) || '';
+    if(!t){ flash('暂无可复制内容，先点"重新生成草稿"。'); return; }
+    copyText(t);
+  });
+
+  document.getElementById('regenArt').addEventListener('click', function(){
+    var art = composeArticle(D);
+    document.getElementById('dailyArt').textContent = art;
+    document.getElementById('dailyTitle').textContent = '草稿（未保存，仅供复制）';
+    flash('这是按当前 data.js 数据生成的草稿；复制后不会覆盖自动版，下次自动更新会刷新。');
+  });
+
+  // 由当前数据临时生成一篇口语化短文（自动版由定时任务用更自然的语言产出）
+  function composeArticle(D){
+    var list=(D.influencers||[]).filter(function(p){
+      return p.summary && p.summary.indexOf('待补充')<0 && (p.highlights||[]).length>0;
+    });
+    var bull=list.filter(function(p){return p.stance==='偏多';});
+    var bear=list.filter(function(p){return p.stance==='偏空';});
+    var mid=list.filter(function(p){return p.stance==='结构性'||p.stance==='中性';});
+    var now=new Date();
+    var dstr=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
+    var L=[];
+    L.push('【'+dstr+'｜大V观点速览】');
+    L.push('');
+    L.push('晚上理了理今天刷到的几位常看的大V，发出来当参考，纯交流不算建议哈。');
+    L.push('');
+    if(bull.length){
+      L.push('看多：'+bull.map(function(p){return p.short;}).join('、')+'仍偏乐观。'+((bull[0]&&bull[0].highlights[0])?('如'+bull[0].short+'：'+bull[0].highlights[0]):''));
+      L.push('');
+    }
+    if(mid.length){
+      L.push('中间派：'+mid.map(function(p){return p.short;}).join('、')+'边涨边慌，拼精选。');
+      L.push('');
+    }
+    if(bear.length){
+      L.push('谨慎：'+bear.map(function(p){return p.short;}).join('、')+'更显眼，提示泡沫与现金流。');
+      L.push('');
+    }
+    var dirs=(D.directions||[]).slice(0,4).map(function(d){return d.name.replace(/\（.*?\）/g,'');});
+    if(dirs.length){ L.push('几个能交叉验证的方向：'+dirs.join('、')+'。'); L.push(''); }
+    L.push('我自己记着：分批买别满仓，卖的唯一理由是逻辑变了，闲钱不加杠杆。');
+    L.push('');
+    L.push('观点都有滞后和选择性，下单还是自己判断。祝长红。');
+    return L.join('\n');
+  }
+
+  // ---- 初始化：渲染日历、观点流、每日文章 ----
+  renderCalendar('cal1');
+  renderCalendar('cal2');
+  renderFeed();
+  renderDaily();
+})();
+</script>
+</body>
+</html>
