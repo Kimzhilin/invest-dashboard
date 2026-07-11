@@ -127,6 +127,7 @@
     <button class="tab-btn active" data-mod="1">📡 大V观点看板</button>
     <button class="tab-btn" data-mod="2">📰 每日汇总文章</button>
     <button class="tab-btn" data-mod="3">📊 股票基金分析</button>
+    <button class="tab-btn" data-mod="4">💼 我的持仓</button>
   </nav>
 
   <div class="legend">
@@ -264,6 +265,112 @@
   </section>
   </div><!-- /mod3 -->
 
+  <div class="module hidden" id="mod4">
+  <style>
+    .m4 .sec-desc b{color:#b54708;}
+    .syncbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:6px 0 14px;padding:10px 14px;border-radius:12px;background:#eef6ff;border:1px solid #cfe2ff;font-size:13px;color:#0b62c9;}
+    .syncbar .sp{margin-left:auto;color:var(--muted);font-size:12px;}
+    .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:8px 0 6px;}
+    .kpi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);}
+    .kpi .k{font-size:12px;color:var(--muted);}
+    .kpi .v{font-size:23px;font-weight:800;margin-top:4px;}
+    .alloc{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-top:8px;}
+    .abar{height:10px;border-radius:6px;background:#eee;overflow:hidden;margin:5px 0 2px;}
+    .abar>i{display:block;height:100%;}
+    .ptable{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+    .ptable th,.ptable td{padding:10px 12px;text-align:right;border-bottom:1px solid var(--line);}
+    .ptable th{background:#f7f9fc;color:var(--muted);font-weight:600;font-size:12px;}
+    .ptable td:nth-child(1),.ptable th:nth-child(1){text-align:left;}
+    .ptable .nm{font-weight:700;}
+    .ptable .mini-btn{padding:4px 10px;font-size:12px;margin-left:4px;}
+    .ptable .danger{border-color:#d6294b;background:#d6294b;}
+    .addbox{background:#fff;border:1px solid #ececf1;border-radius:14px;padding:16px;margin-top:12px;}
+    .rebal{background:#fff;border:1px solid #ececf1;border-radius:14px;padding:16px;margin-top:12px;overflow-x:auto;}
+    .rebal table{width:100%;border-collapse:collapse;font-size:13px;}
+    .rebal td,.rebal th{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;}
+    .rebal th{color:var(--muted);font-weight:600;font-size:12px;}
+    .rebal td:nth-child(1),.rebal th:nth-child(1){text-align:left;}
+    .rebal input{width:64px;font-size:12px;padding:4px 6px;border:1px solid #d9d9e3;border-radius:7px;text-align:right;}
+    .txn{font-size:12.5px;color:var(--muted);max-height:200px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;}
+    .txn div{padding:5px 0;border-bottom:1px dashed var(--line);}
+    .note4{font-size:12px;color:var(--muted);background:#fffbe9;border:1px solid #f3e2a8;border-radius:10px;padding:10px 12px;margin-top:12px;line-height:1.7;}
+    .modal-mask{position:fixed;inset:0;background:rgba(20,30,50,.4);display:none;align-items:center;justify-content:center;z-index:50;}
+    .modal-mask.show{display:flex;}
+    .modal{background:#fff;border-radius:16px;padding:20px 22px;width:min(460px,92vw);box-shadow:0 12px 40px rgba(0,0,0,.2);}
+    .modal h3{margin:0 0 12px;font-size:17px;}
+    .modal .field{margin:10px 0;}
+    .modal label{font-size:12.5px;color:var(--muted);display:block;margin-bottom:4px;}
+    .modal input,.modal select,.modal textarea{width:100%;font-size:14px;padding:8px 10px;border:1px solid #d9d9e3;border-radius:9px;box-sizing:border-box;}
+  </style>
+  <section class="m4">
+    <div class="sec-title"><span class="bar"></span>💼 我的持仓 · 管理 / 调仓 / 同步</div>
+    <p class="sec-desc">这里就是你<span style="color:#b54708;font-weight:700;">真实的持仓</span>：A股（东方财富）+ 基金（支付宝/理财通）。可<b>增加 / 删除 / 编辑</b>任意标的，设置<b>目标比例做调仓</b>，一键<b>同步实时估值</b>。所有改动只存在你本机浏览器，不上传任何服务器。</p>
+
+    <div class="syncbar">
+      <span id="syncInfo">🔄 准备同步…</span>
+      <button class="mini-btn" id="btnSync">🔄 同步实时估值</button>
+      <button class="mini-btn" id="btnExport" style="background:#fff;color:#1d6fe0;">⬇ 导出</button>
+      <button class="mini-btn" id="btnImport" style="background:#fff;color:#1d6fe0;">⬆ 导入</button>
+      <span class="sp" id="lastSync"></span>
+    </div>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="sec-title" style="margin-top:24px;"><span class="bar"></span>行业配置与偏离</div>
+    <div class="alloc" id="alloc"></div>
+
+    <div class="sec-title" style="margin-top:24px;"><span class="bar"></span>持仓明细</div>
+    <div style="margin-top:6px;"><button class="mini-btn" id="btnAdd">＋ 增加持仓</button></div>
+    <div style="overflow-x:auto;"><table class="ptable" id="ptable"><thead></thead><tbody></tbody></table></div>
+
+    <div class="sec-title" style="margin-top:24px;"><span class="bar"></span>调仓 · 目标配置</div>
+    <p class="sec-desc">给每个持仓设「目标占比%」，系统按当前总市值算出<b>该买 / 该卖</b>多少钱，帮你被动再平衡（高抛低吸）。</p>
+    <div class="rebal" id="rebal"></div>
+    <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;">
+      <button class="mini-btn" id="btnApplyRebal">✓ 记录本次调仓交易</button>
+      <button class="mini-btn" id="btnClearTargets" style="background:#fff;color:#1d6fe0;">清空目标</button>
+    </div>
+
+    <div class="sec-title" style="margin-top:24px;"><span class="bar"></span>调仓记录</div>
+    <div class="txn" id="txn"></div>
+
+    <div class="note4" id="note4">
+      ⚠️ 关于「同步持仓」：支付宝 / 理财通 / 证券账户受登录鉴权与合规限制，<b>无法自动读取你的真实持仓</b>。这里的「同步」= 一键刷新所有标的的<b>实时估值 / 价格</b>（来自东方财富公开接口），你的持仓明细由你手动维护并保存在本机。换设备可用「导出 / 导入」迁移。
+    </div>
+  </section>
+
+  <div class="modal-mask" id="modalMask">
+    <div class="modal" id="modal">
+      <h3 id="modalTitle">增加持仓</h3>
+      <div class="field" id="fCode"><label>代码（基金6位 / 股票如 000100 或 000100.SZ）</label><input id="inCode" placeholder="例如 000100" /></div>
+      <div class="field" id="fType"><label>类型</label><select id="inType"><option value="0">基金</option><option value="1">股票(A股)</option></select></div>
+      <div class="field" id="fMeta" style="display:none;"><label id="metaName" style="color:var(--ink);font-weight:700;"></label></div>
+      <div class="field" id="fAmt"><label id="lblAmt">持有金额(元)</label><input id="inAmt" type="number" placeholder="0" /></div>
+      <div class="field" id="fCost"><label id="lblCost">成本金额(元)</label><input id="inCost" type="number" placeholder="0" /></div>
+      <div class="field" id="fShares" style="display:none;"><label>持股数（股）</label><input id="inShares" type="number" placeholder="0" /></div>
+      <div class="field" id="fCp" style="display:none;"><label>成本价(元/股)</label><input id="inCp" type="number" placeholder="0" /></div>
+      <div style="display:flex;gap:10px;margin-top:14px;">
+        <button class="mini-btn" id="btnLookup">搜索</button>
+        <button class="mini-btn" id="btnSaveModal" style="background:#1a9e57;border-color:#1a9e57;">加入持仓</button>
+        <button class="mini-btn" id="btnCancelModal" style="background:#fff;color:#666;">取消</button>
+      </div>
+      <div class="hint" id="modalHint" style="font-size:12px;color:var(--muted);margin-top:8px;min-height:16px;"></div>
+    </div>
+  </div>
+
+  <div class="modal-mask" id="importMask">
+    <div class="modal">
+      <h3>导入持仓(JSON)</h3>
+      <div class="field"><label>粘贴此前导出的 JSON</label><textarea id="inImport" style="height:160px;font-size:12px;"></textarea></div>
+      <div style="display:flex;gap:10px;margin-top:10px;">
+        <button class="mini-btn" id="btnDoImport" style="background:#1a9e57;border-color:#1a9e57;">导入</button>
+        <button class="mini-btn" id="btnCancelImport" style="background:#fff;color:#666;">取消</button>
+      </div>
+      <div class="hint" id="importHint" style="font-size:12px;color:var(--muted);margin-top:8px;"></div>
+    </div>
+  </div>
+  </div><!-- /mod4 -->
+
   <div class="disclaimer" id="disc">—</div>
 
   <footer>本看板由 WorkBuddy 生成 · 仅为信息聚合与教育参考，不构成投资建议</footer>
@@ -271,6 +378,8 @@
 
 <script src="data.js"></script>
 <script src="funds.js"></script>
+<script src="holdings.js"></script>
+<script src="portfolio.js"></script>
 <script>
 (function(){
   var D = window.DASHBOARD_DATA;
@@ -540,9 +649,8 @@
 <script>
 /* ================= 模块三：股票/基金分析引擎 ================= */
 (function(){
-  var FD = window.FUND_DATA;
-  if(!FD || !FD.funds){ console.warn('funds data missing'); return; }
-  var funds = FD.funds;
+  if(!window.Portfolio){ console.warn('portfolio missing'); return; }
+  var funds = [];
 
   // ---------- 数学工具 ----------
   function sma(a,n){ n=Math.min(n, Math.max(2,Math.floor(a.length*0.6))); var s=0; for(var i=a.length-n;i<a.length;i++) s+=a[i]; return s/n; }
@@ -598,6 +706,14 @@
   }
   function sweep(f,a){
     var flags=[], vol=annVol(a), mdd=maxDD(a);
+    if(f.isStock){
+      flags.push('个股·波动风险');
+      if(vol>30) flags.push('高波动 '+vol.toFixed(0)+'%');
+      if(mdd<-30) flags.push('历史最大回撤 '+mdd.toFixed(0)+'%');
+      var lvl = flags.length>=3?'关注':'安全';
+      var lc = lvl==='关注'?'b-warn':'b-safe';
+      return {flags:flags,level:lvl,lc:lc,vol:vol,mdd:mdd};
+    }
     if(vol>25) flags.push('高波动 '+vol.toFixed(0)+'%');
     if(mdd<-30) flags.push('历史最大回撤 '+mdd.toFixed(0)+'%');
     if(/QDII/.test(f.type)) flags.push('QDII·汇率/时差风险');
@@ -609,44 +725,57 @@
     return {flags:flags,level:lvl,lc:lc,vol:vol,mdd:mdd};
   }
 
-  // ---------- 本地存储（金额/成本） ----------
-  var LS='fundstate_v1';
-  var state={};
-  try{ state=JSON.parse(localStorage.getItem(LS)||'{}'); }catch(e){ state={}; }
-  function saveState(){ try{ localStorage.setItem(LS, JSON.stringify(state)); }catch(e){} }
-  function st(code){ if(!state[code]) state[code]={amount:null,cost:null}; return state[code]; }
-
-  // ---------- 渲染基金卡片 ----------
+  // ---------- 渲染基金/股票卡片（数据来自 Portfolio） ----------
   function renderFundCard(f){
-    var a=f.navHistory.map(function(d){return d.dwjz;});
-    if(a.length<3) return '';
-    var t=trend(a), b=band(a), dd=drawdown(a), rv=reverse(a), sw=sweep(f,a);
-    var s=st(f.code);
-    var amount = s.amount!=null ? s.amount : f.amount;
-    var cost = s.cost!=null ? s.cost : f.amount;
-    var gain = cost>0 ? (amount-cost) : 0;
-    var gainPct = cost>0 ? (amount/cost-1)*100 : 0;
-    var live = window.__live && window.__live[f.code];
-    var estHtml = live && live.gszzl!=null
-      ? '<span class="est '+cls(parseFloat(live.gszzl))+'">'+pct(parseFloat(live.gszzl))+'</span><div class="mini">估算额 '+ (live.gszzl>=0?'+':'') + (amount*parseFloat(live.gszzl)/100).toFixed(0) +' 元 · '+ (live.gztime||'') +'</div>'
-      : '<span class="est mini">盘中估值加载中…</span>';
-    var gh = (f.navHistory[f.navHistory.length-1]||{});
+    var hist = f.navHistory || [];
+    var a = hist.map(function(d){return d.dwjz;});
+    var hasHist = a.length>=3;
+    var t,b,dd,rv,sw,ghDate='';
+    if(hasHist){ t=trend(a); b=band(a); dd=drawdown(a); rv=reverse(a); sw=sweep(f,a); ghDate=(hist[hist.length-1]||{}).date||''; }
+    var amount = f.amount||0, cost = (f.costAmount!=null?f.costAmount:f.amount)||0;
+    var gain = amount-cost, gainPct = cost>0 ? (amount/cost-1)*100 : 0;
+    var live = f.live, estHtml;
+    if(f.isStock){
+      var chg=(live&&live.chgPct!=null)?live.chgPct:null, px=(live&&live.price)?live.price:(f.price||null);
+      estHtml = (chg!=null)
+        ? '<span class="est '+cls(chg)+'">'+pct(chg)+'</span><div class="mini">现价 '+(px!=null?px.toFixed(2):'-')+' · '+(live&&live.preClose?('昨收'+live.preClose.toFixed(2)):'')+'</div>'
+        : '<span class="est mini">实时价加载中…</span>';
+    } else {
+      var gz=(live&&live.gszzl!=null)?parseFloat(live.gszzl):null;
+      estHtml = (gz!=null)
+        ? '<span class="est '+cls(gz)+'">'+pct(gz)+'</span><div class="mini">估算额 '+(gz>=0?'+':'')+(amount*gz/100).toFixed(0)+' 元 · '+(live.gztime||'')+'</div>'
+        : '<span class="est mini">盘中估值加载中…</span>';
+    }
+    var inputsHtml;
+    if(f.isStock){
+      var amtDerived = (f.shares && (live&&live.price)) ? f.shares*live.price : amount;
+      inputsHtml =
+        '<div class="frow"><span class="k">持股数(股)</span><span class="v"><input class="inp" id="sh_'+f.code+'" value="'+Math.round(f.shares||0)+'"></span></div>'+
+        '<div class="frow"><span class="k">成本价(元)</span><span class="v"><input class="inp" id="cp_'+f.code+'" value="'+((f.costPrice!=null)?f.costPrice.toFixed(3):'0')+'"></span></div>'+
+        '<div class="frow"><span class="k">持有金额(元)</span><span class="v" id="amtv_'+f.code+'">'+Math.round(amtDerived)+'</span></div>';
+    } else {
+      inputsHtml =
+        '<div class="frow"><span class="k">持有金额(元)</span><span class="v"><input class="inp" id="amt_'+f.code+'" value="'+Math.round(amount)+'"></span></div>'+
+        '<div class="frow"><span class="k">成本金额(元)</span><span class="v"><input class="inp" id="cst_'+f.code+'" value="'+Math.round(cost)+'"></span></div>';
+    }
+    var signalsHtml = hasHist
+      ? '<div class="frow"><span class="k">趋势强弱</span><span class="v"><span class="badge '+('b-'+t.label)+'">'+t.label+' '+t.score+'</span></span></div>'+
+        '<div class="gauge"><i style="width:'+t.score+'%;background:'+(t.label==='强'?'#d6294b':t.label==='中'?'#e0a200':'#1a9e57')+';"></i></div>'+
+        '<div class="frow"><span class="k">波段信号</span><span class="v"><span class="badge '+b.c+'">'+b.t+'</span></span></div>'+
+        '<div class="frow"><span class="k">回撤/抄底</span><span class="v"><span class="badge '+dd.zc+'">'+dd.zone+' '+dd.cur.toFixed(1)+'%</span></span></div>'+
+        '<div class="frow"><span class="k">最大回撤</span><span class="v">'+dd.max.toFixed(1)+'%</span></div>'+
+        '<div class="frow"><span class="k">神奇反转</span><span class="v"><span class="badge '+rv.sc+'">'+rv.sig+'</span> <span class="mini">RSI '+rv.rsi.toFixed(0)+'</span></span></div>'+
+        '<div class="frow"><span class="k">基金扫雷</span><span class="v"><span class="badge '+sw.lc+'">'+sw.level+'</span></span></div>'+
+        '<div class="mini" style="margin-top:6px;line-height:1.7;">'+sw.flags.join(' · ')+'</div>'
+      : '<div class="mini" style="margin-top:6px;line-height:1.7;">历史行情加载中（稍后自动补齐）· 信号暂隐。</div>';
     return ''+
     '<div class="fcard">'+
       '<h4>'+f.name+'</h4>'+
-      '<div class="fmeta">'+f.code+' · '+f.type+' · '+f.sector+' · 净值'+ (gh.date||'') +'</div>'+
-      '<div class="frow"><span class="k">今日实时估算</span><span class="v">'+estHtml+'</span></div>'+
-      '<div class="frow"><span class="k">持有金额(元)</span><span class="v"><input class="inp" id="amt_'+f.code+'" value="'+Math.round(amount)+'"></span></div>'+
-      '<div class="frow"><span class="k">成本金额(元)</span><span class="v"><input class="inp" id="cst_'+f.code+'" value="'+Math.round(cost)+'"></span></div>'+
-      '<div class="frow"><span class="k">累计盈亏</span><span class="v '+(gain>=0?'up':'down')+'">'+(gain>=0?'+':'')+gain.toFixed(0)+' 元 ('+pct(gainPct)+')</span></div>'+
-      '<div class="frow"><span class="k">趋势强弱</span><span class="v"><span class="badge '+('b-'+t.label)+'">'+t.label+' '+t.score+'</span></span></div>'+
-      '<div class="gauge"><i style="width:'+t.score+'%;background:'+(t.label==='强'?'#d6294b':t.label==='中'?'#e0a200':'#1a9e57')+';"></i></div>'+
-      '<div class="frow"><span class="k">波段信号</span><span class="v"><span class="badge '+b.c+'">'+b.t+'</span></span></div>'+
-      '<div class="frow"><span class="k">回撤/抄底</span><span class="v"><span class="badge '+dd.zc+'">'+dd.zone+' '+dd.cur.toFixed(1)+'%</span></span></div>'+
-      '<div class="frow"><span class="k">最大回撤</span><span class="v">'+dd.max.toFixed(1)+'%</span></div>'+
-      '<div class="frow"><span class="k">神奇反转</span><span class="v"><span class="badge '+rv.sc+'">'+rv.sig+'</span> <span class="mini">RSI '+rv.rsi.toFixed(0)+'</span></span></div>'+
-      '<div class="frow"><span class="k">基金扫雷</span><span class="v"><span class="badge '+sw.lc+'">'+sw.level+'</span></span></div>'+
-      '<div class="mini" style="margin-top:6px;line-height:1.7;">'+sw.flags.join(' · ')+'</div>'+
+      '<div class="fmeta">'+f.code+' · '+f.type+' · '+f.sector+(hasHist?(' · 净值'+ghDate):'')+'</div>'+
+      '<div class="frow"><span class="k">今日实时'+(f.isStock?'涨跌':'估算')+'</span><span class="v">'+estHtml+'</span></div>'+
+      inputsHtml+
+      '<div class="frow"><span class="k">累计盈亏</span><span class="v '+(gain>=0?'up':'down')+'" id="pnl_'+f.code+'">'+(gain>=0?'+':'')+gain.toFixed(0)+' 元 ('+pct(gainPct)+')</span></div>'+
+      signalsHtml+
     '</div>';
   }
 
@@ -654,19 +783,34 @@
     var g=document.getElementById('fundGrid');
     g.innerHTML = funds.map(renderFundCard).join('');
     funds.forEach(function(f){
-      var ae=document.getElementById('amt_'+f.code), ce=document.getElementById('cst_'+f.code);
-      if(ae) ae.addEventListener('input', function(){ st(f.code).amount=parseFloat(ae.value)||0; saveState(); refreshCardPnl(f.code); });
-      if(ce) ce.addEventListener('input', function(){ st(f.code).cost=parseFloat(ce.value)||0; saveState(); refreshCardPnl(f.code); });
+      if(f.isStock){
+        var sh=document.getElementById('sh_'+f.code), cp=document.getElementById('cp_'+f.code);
+        if(sh) sh.addEventListener('input', function(){
+          var shares=parseFloat(sh.value)||0;
+          var price=(f.live&&f.live.price)?f.live.price:(f.price||0);
+          window.Portfolio.updateHolding(f.code,{shares:shares, amount:shares*price}, true);
+          var amtEl=document.getElementById('amtv_'+f.code); if(amtEl) amtEl.textContent=Math.round(shares*price);
+          updatePnl(f.code); if(window.__refreshPortfolioUI) window.__refreshPortfolioUI();
+        });
+        if(cp) cp.addEventListener('input', function(){
+          var cpv=parseFloat(cp.value)||0;
+          var shEl=document.getElementById('sh_'+f.code); var shares=shEl?parseFloat(shEl.value)||0:(f.shares||0);
+          window.Portfolio.updateHolding(f.code,{costPrice:cpv, costAmount:shares*cpv}, true);
+          updatePnl(f.code); if(window.__refreshPortfolioUI) window.__refreshPortfolioUI();
+        });
+      } else {
+        var ae=document.getElementById('amt_'+f.code), ce=document.getElementById('cst_'+f.code);
+        if(ae) ae.addEventListener('input', function(){ window.Portfolio.updateHolding(f.code,{amount:parseFloat(ae.value)||0}, true); updatePnl(f.code); if(window.__refreshPortfolioUI) window.__refreshPortfolioUI(); });
+        if(ce) ce.addEventListener('input', function(){ window.Portfolio.updateHolding(f.code,{costAmount:parseFloat(ce.value)||0}, true); updatePnl(f.code); if(window.__refreshPortfolioUI) window.__refreshPortfolioUI(); });
+      }
     });
   }
-  function refreshCardPnl(code){
-    var f=funds.find(function(x){return x.code===code;}); if(!f) return;
-    var s=st(code); var amount=s.amount||f.amount, cost=s.cost||f.amount;
-    var gain=(amount-cost), gp=cost>0?(amount/cost-1)*100:0;
-    var card=document.getElementById('amt_'+code).closest('.fcard');
-    var rows=card.querySelectorAll('.frow');
-    // 累计盈亏 是 index 4 (0今日,1金额,2成本,3盈亏,4趋势...)
-    var pnl=rows[3].querySelector('.v'); pnl.className='v '+(gain>=0?'up':'down'); pnl.textContent=(gain>=0?'+':'')+gain.toFixed(0)+' 元 ('+pct(gp)+')';
+  function updatePnl(code){
+    var all=window.Portfolio.getPortfolio(); var f=all.find(function(x){return x.code===code;}); if(!f) return;
+    var amount=f.amount||0, cost=(f.costAmount!=null?f.costAmount:f.amount)||0;
+    var gain=amount-cost, gp=cost>0?(amount/cost-1)*100:0;
+    var el=document.getElementById('pnl_'+code);
+    if(el){ el.className='v '+(gain>=0?'up':'down'); el.textContent=(gain>=0?'+':'')+gain.toFixed(0)+' 元 ('+pct(gp)+')'; }
   }
 
   // ---------- 板块波段 ----------
@@ -775,40 +919,231 @@
     }catch(e){ document.getElementById('intraday').innerHTML='<span class="mini">分时加载失败（网络/CORS），不影响其他功能；可点「加载分时」重试。</span>'; info.textContent=''; }
   }
 
-  // ---------- 实时估值(JSONP) ----------
-  function loadLive(){
-    window.__live={};
-    window.jsonpgz=function(d){ window.__live[d.fundcode]={gsz:d.gsz,gszzl:parseFloat(d.gszzl),gztime:d.gztime}; renderLive(); };
-    var bar=document.getElementById('livebar'); var pending=funds.length, done=0;
-    funds.forEach(function(f){
-      var s=document.createElement('script');
-      s.src='https://fundgz.1234567.com.cn/js/'+f.code+'.js';
-      s.onload=function(){ done++; if(done>=pending) bar.textContent='✅ 今日实时估值已更新（'+funds.length+'只）· 数据源：东方财富'; };
-      s.onerror=function(){ done++; if(done>=pending) bar.textContent='⚠️ 部分实时估值加载失败，净值信号不受影响'; };
-      document.body.appendChild(s);
-    });
-    setTimeout(function(){ if(done<pending) bar.textContent='⏱️ 实时估值加载较慢，稍后自动刷新；净值信号已可用'; },9000);
+  // ---------- 启动（数据来自 Portfolio） ----------
+  function renderMod3(){
+    funds = window.Portfolio.getPortfolio();
+    renderGrid(); renderSectors(); renderSelector(); renderIntra();
   }
-  function renderLive(){
-    funds.forEach(function(f){
-      var live=window.__live[f.code]; if(!live) return;
-      var card=document.getElementById('amt_'+f.code); if(!card) return;
-      var v=card.closest('.fcard');
-      var est=v.querySelector('.est'); if(!est) return;
-      var amount=st(f.code).amount!=null?st(f.code).amount:f.amount;
-      est.outerHTML='<span class="est '+cls(live.gszzl)+'">'+pct(live.gszzl)+'</span><div class="mini">估算额 '+(live.gszzl>=0?'+':'')+(amount*live.gszzl/100).toFixed(0)+' 元 · '+(live.gztime||'')+'</div>';
-    });
-  }
-
-  // ---------- 启动 ----------
-  renderGrid();
-  renderSectors();
-  renderSelector();
-  renderIntra();
-  loadLive();
+  window.__renderMod3 = renderMod3;
+  window.Portfolio.onChange(renderMod3);
+  renderMod3();
+  // 历史行情补足（含A股）→ 重渲染信号
+  window.Portfolio.ensureHistory().then(function(){ window.Portfolio.refresh(); });
+  // 实时同步估值/价格
+  window.Portfolio.syncLive().then(function(){
+    window.Portfolio.refresh();
+    var bar=document.getElementById('livebar');
+    if(bar) bar.textContent='✅ 实时估值已同步（'+funds.length+'只）· 数据源：东方财富';
+  });
   // 切到模块三时重算（避免隐藏态测量误差）
-  document.getElementById('tabs').addEventListener('click', function(e){ if(e.target.getAttribute('data-mod')==='3'){ setTimeout(function(){ renderSectors(); }, 30); } });
+  document.getElementById('tabs').addEventListener('click', function(e){
+    if(e.target.getAttribute('data-mod')==='3'){ setTimeout(function(){ renderMod3(); }, 30); }
+  });
 })();
 </script>
+<script>
+/* ================= 模块四：我的持仓 管理 / 调仓 / 同步 ================= */
+(function(){
+  var P = window.Portfolio;
+  if(!P) return;
+  function fmt(n){ return (n==null?0:n).toLocaleString('zh-CN',{maximumFractionDigits:0}); }
+  function money(n){ var s=n<0?'-':''; return s+'¥'+fmt(Math.abs(n)); }
+  function pct(x){ return (x>=0?'+':'')+x.toFixed(2)+'%'; }
+
+  // ---------- 主渲染 ----------
+  function renderUI(){
+    var s = P.summary();
+    var kpis=document.getElementById('kpis');
+    kpis.innerHTML =
+      kpi('持仓市值', money(s.totalValue)) +
+      kpi('持仓成本', money(s.totalCost)) +
+      kpi('累计盈亏', '<span class="'+(s.totalPnl>=0?'up':'down')+'">'+(s.totalPnl>=0?'+':'')+fmt(s.totalPnl)+' ('+pct(s.totalCost>0?s.totalPnl/s.totalCost*100:0)+')</span>') +
+      kpi('今日预估', '<span class="'+(s.today>=0?'up':'down')+'">'+(s.today>=0?'+':'')+fmt(s.today)+'</span>');
+    var alloc=document.getElementById('alloc');
+    var sectors=Object.keys(s.bySector);
+    alloc.innerHTML = sectors.length? sectors.map(function(k){
+      var v=s.bySector[k], w=s.totalValue>0?(v/s.totalValue*100):0;
+      var c=w>=25?'#d6294b':w>=12?'#e0a200':'#1a9e57';
+      return '<div class="sector"><div class="sname">'+k+'</div><div class="abar"><i style="width:'+w+'%;background:'+c+';"></i></div><div class="mini">'+money(v)+' · '+w.toFixed(1)+'%</div></div>';
+    }).join('') : '<div class="mini">暂无持仓</div>';
+    renderTable(); renderRebal(); renderTxn();
+    var ls=document.getElementById('lastSync');
+    if(ls) ls.textContent = s.lastSync ? ('上次同步：'+new Date(s.lastSync).toLocaleString('zh-CN')) : '';
+  }
+  function kpi(k,v){ return '<div class="kpi"><div class="k">'+k+'</div><div class="v">'+v+'</div></div>'; }
+
+  function renderTable(){
+    var list=P.getPortfolio();
+    document.querySelector('#ptable thead').innerHTML='<tr><th>名称/代码</th><th>类型</th><th>行业</th><th>持有额</th><th>成本</th><th>盈亏</th><th>今日</th><th>操作</th></tr>';
+    var tb=document.querySelector('#ptable tbody');
+    if(!list.length){ tb.innerHTML='<tr><td colspan="8" style="text-align:center;color:var(--muted);padding:18px;">暂无持仓，点「＋ 增加持仓」开始</td></tr>'; return; }
+    tb.innerHTML=list.map(function(f){
+      var est, price, pre, today;
+      if(f.isStock){ price=(f.live&&f.live.price)?f.live.price:f.price; pre=(f.live&&f.live.preClose)?f.live.preClose:(f.price||price); est=f.shares?f.shares*price:f.amount; if(f.shares) today=f.shares*(price-pre); }
+      else { var gz=(f.live&&f.live.gszzl!=null)?parseFloat(f.live.gszzl):0; est=f.amount*(1+gz/100); today=f.amount*gz/100; }
+      var cost=f.costAmount||0; var pnl=est-cost; var pp=cost>0?(est/cost-1)*100:0;
+      return '<tr>'+
+        '<td class="nm">'+f.name+'<br><span class="mini">'+f.code+'</span></td>'+
+        '<td>'+f.type+'</td><td>'+f.sector+'</td>'+
+        '<td>'+money(est)+'</td><td>'+money(cost)+'</td>'+
+        '<td class="'+(pnl>=0?'up':'down')+'">'+(pnl>=0?'+':'')+fmt(pnl)+'<br><span class="mini">'+pct(pp)+'</span></td>'+
+        '<td class="'+(today>=0?'up':'down')+'">'+(today>=0?'+':'')+fmt(today)+'</td>'+
+        '<td><button class="mini-btn" data-edit="'+f.code+'">编辑</button><button class="mini-btn danger" data-del="'+f.code+'">删除</button></td>'+
+      '</tr>';
+    }).join('');
+    tb.querySelectorAll('[data-del]').forEach(function(b){ b.addEventListener('click', function(){ var c=b.getAttribute('data-del'); if(confirm('确定删除「'+c+'」？此操作仅在你本机生效。')) P.removeHolding(c); }); });
+    tb.querySelectorAll('[data-edit]').forEach(function(b){ b.addEventListener('click', function(){ openEdit(b.getAttribute('data-edit')); }); });
+  }
+
+  function renderRebal(){
+    var list=P.getPortfolio(); var s=P.summary();
+    var box=document.getElementById('rebal');
+    if(!list.length){ box.innerHTML='<span class="mini">暂无持仓</span>'; return; }
+    var rows=list.map(function(f){
+      var est;
+      if(f.isStock){ var price=(f.live&&f.live.price)?f.live.price:f.price; est=f.shares?f.shares*price:f.amount; }
+      else { var gz=(f.live&&f.live.gszzl!=null)?parseFloat(f.live.gszzl):0; est=f.amount*(1+gz/100); }
+      var tgt=(s.targets&&s.targets[f.code]!=null)? (s.targets[f.code]*100) : '';
+      return '<tr><td>'+f.name+'</td><td>'+money(est)+'</td>'+
+        '<td><input type="number" step="1" id="tgt_'+f.code+'" value="'+tgt+'" placeholder="%"></td>'+
+        '<td id="delta_'+f.code+'">—</td></tr>';
+    }).join('');
+    box.innerHTML='<table><thead><tr><th>持仓</th><th>当前市值</th><th>目标%</th><th>建议操作</th></tr></thead><tbody>'+rows+'</tbody></table><div class="mini" id="rebalSum" style="margin-top:8px;"></div>';
+    computeDeltas();
+    box.querySelectorAll('[id^="tgt_"]').forEach(function(inp){ inp.addEventListener('input', function(){ var code=inp.id.replace('tgt_',''); P.setTarget(code, parseFloat(inp.value)/100); }); });
+  }
+  function computeDeltas(){
+    var list=P.getPortfolio(); var s=P.summary();
+    var sumT=0;
+    list.forEach(function(f){
+      var inp=document.getElementById('tgt_'+f.code); var v=inp?parseFloat(inp.value):NaN; var t=isNaN(v)?null:(v/100); if(t) sumT+=t;
+      var el=document.getElementById('delta_'+f.code); if(!el) return;
+      if(t==null){ el.textContent='—'; el.className=''; return; }
+      var est;
+      if(f.isStock){ var price=(f.live&&f.live.price)?f.live.price:f.price; est=f.shares?f.shares*price:f.amount; }
+      else { var gz=(f.live&&f.live.gszzl!=null)?parseFloat(f.live.gszzl):0; est=f.amount*(1+gz/100); }
+      var diff=t*s.totalValue-est;
+      if(Math.abs(diff)<s.totalValue*0.005){ el.textContent='✓ 已达标'; el.className=''; }
+      else if(diff>0){ el.innerHTML='<span class="up">买入 '+money(diff)+'</span>'; }
+      else { el.innerHTML='<span class="down">卖出 '+money(-diff)+'</span>'; }
+    });
+    var rs=document.getElementById('rebalSum'); if(rs) rs.textContent='目标占比合计：'+(sumT*100).toFixed(0)+'%'+(Math.abs(sumT-1)>0.001?'（提示：建议合计=100%）':'（已=100%）');
+  }
+
+  function renderTxn(){
+    var s=P.summary(); var box=document.getElementById('txn');
+    if(!s.txns.length){ box.innerHTML='<span class="mini">还没有调仓记录。设好目标比例后点「记录本次调仓交易」。</span>'; return; }
+    box.innerHTML=s.txns.slice().reverse().map(function(t){
+      var col=t.side==='buy'?'up':'down';
+      return '<div><span class="'+col+'">'+(t.side==='buy'?'买入':'卖出')+'</span> '+t.name+' · '+(t.shares?t.shares+'股 ':'')+money(t.amount)+' · <span class="mini">'+new Date(t.ts).toLocaleString('zh-CN')+'</span></div>';
+    }).join('');
+  }
+
+  // ---------- 同步 ----------
+  document.getElementById('btnSync').addEventListener('click', function(){
+    var info=document.getElementById('syncInfo'); info.textContent='🔄 同步中…';
+    P.syncLive().then(function(){ P.refresh(); info.textContent='✅ 已同步实时估值'; }).catch(function(){ info.textContent='⚠️ 同步失败，检查网络后重试'; });
+  });
+
+  // ---------- 导出 / 导入 ----------
+  document.getElementById('btnExport').addEventListener('click', function(){
+    var blob=new Blob([P.exportJSON()],{type:'application/json'});
+    var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='my-portfolio-'+new Date().toISOString().slice(0,10)+'.json'; a.click();
+    document.getElementById('syncInfo').textContent='⬇ 已导出 JSON';
+  });
+  document.getElementById('btnImport').addEventListener('click', function(){ document.getElementById('importMask').classList.add('show'); });
+  document.getElementById('btnCancelImport').addEventListener('click', function(){ document.getElementById('importMask').classList.remove('show'); });
+  document.getElementById('btnDoImport').addEventListener('click', function(){
+    var txt=document.getElementById('inImport').value; var hint=document.getElementById('importHint');
+    try{ P.importJSON(txt); hint.textContent='✅ 导入成功'; setTimeout(function(){ document.getElementById('importMask').classList.remove('show'); }, 800); }
+    catch(e){ hint.textContent='⚠️ 解析失败：'+e.message; }
+  });
+
+  // ---------- 增加 / 编辑 弹窗 ----------
+  var modalMode='add', modalCode='';
+  function showTypeFields(){
+    var isStock = document.getElementById('inType').value==='1';
+    document.getElementById('fShares').style.display = isStock?'block':'none';
+    document.getElementById('fCp').style.display = isStock?'block':'none';
+    document.getElementById('fAmt').style.display = isStock?'none':'block';
+    document.getElementById('fCost').style.display = isStock?'none':'block';
+    document.getElementById('lblShares');
+  }
+  function openAdd(){ modalMode='add'; modalCode=''; document.getElementById('modalTitle').textContent='增加持仓';
+    document.getElementById('inCode').value=''; document.getElementById('inType').value='0';
+    document.getElementById('fMeta').style.display='none'; document.getElementById('inAmt').value=''; document.getElementById('inCost').value='';
+    document.getElementById('inShares').value=''; document.getElementById('inCp').value=''; document.getElementById('modalHint').textContent='';
+    showTypeFields(); document.getElementById('modalMask').classList.add('show'); }
+  function openEdit(code){ modalMode='edit'; modalCode=code; var f=P.getPortfolio().find(function(x){return x.code===code;}); if(!f) return;
+    document.getElementById('modalTitle').textContent='编辑持仓 · '+f.name;
+    document.getElementById('inCode').value=code; document.getElementById('inType').value=f.isStock?'1':'0';
+    document.getElementById('metaName').textContent=f.name+'（'+f.code+'）'; document.getElementById('fMeta').style.display='block';
+    if(f.isStock){ document.getElementById('inShares').value=Math.round(f.shares||0); document.getElementById('inCp').value=(f.costPrice!=null?f.costPrice:''); document.getElementById('inAmt').value=''; document.getElementById('inCost').value=''; }
+    else { document.getElementById('inAmt').value=Math.round(f.amount||0); document.getElementById('inCost').value=Math.round(f.costAmount||0); document.getElementById('inShares').value=''; document.getElementById('inCp').value=''; }
+    showTypeFields(); document.getElementById('modalMask').classList.add('show'); }
+  document.getElementById('btnAdd').addEventListener('click', openAdd);
+  document.getElementById('inType').addEventListener('change', showTypeFields);
+  document.getElementById('btnCancelModal').addEventListener('click', function(){ document.getElementById('modalMask').classList.remove('show'); });
+  document.getElementById('btnLookup').addEventListener('click', function(){
+    var code=document.getElementById('inCode').value.trim(); var isStock=document.getElementById('inType').value==='1';
+    var hint=document.getElementById('modalHint'); if(!code){ hint.textContent='请先输入代码'; return; }
+    hint.textContent='查询中…';
+    P.lookup(code, isStock).then(function(m){
+      if(!m){ hint.textContent='未找到，请检查代码'; return; }
+      document.getElementById('metaName').textContent=(m.name||code)+(isStock?'（股票）':'（基金）');
+      document.getElementById('fMeta').style.display='block';
+      if(isStock){ if(!document.getElementById('inCp').value && m.price) document.getElementById('inCp').value=m.price; }
+      hint.textContent='已识别：'+(m.name||code);
+    }).catch(function(){ hint.textContent='查询失败，可手动填写后直接加入'; });
+  });
+  document.getElementById('btnSaveModal').addEventListener('click', function(){
+    var code=document.getElementById('inCode').value.trim(); var isStock=document.getElementById('inType').value==='1';
+    var hint=document.getElementById('modalHint'); if(!code){ hint.textContent='请输入代码'; return; }
+    var meta={code:code};
+    if(isStock){
+      var shares=parseFloat(document.getElementById('inShares').value)||0;
+      var cp=parseFloat(document.getElementById('inCp').value)||0;
+      meta.isStock=true; meta.type='股票-A股'; meta.shares=shares; meta.costPrice=cp; meta.bench=P.secidOf(code);
+      meta.amount=shares*cp; meta.costAmount=shares*cp; // 市值/成本以成本暂记，同步后刷新
+    } else {
+      var amt=parseFloat(document.getElementById('inAmt').value)||0;
+      var cost=parseFloat(document.getElementById('inCost').value)||0;
+      meta.isStock=false; meta.type='基金'; meta.amount=amt; meta.costAmount=cost;
+    }
+    if(modalMode==='edit'){ P.updateHolding(code, meta); } else { P.addHolding(meta); }
+    document.getElementById('modalMask').classList.remove('show');
+    P.ensureHistory().then(function(){ P.refresh(); });
+  });
+
+  // ---------- 调仓 ----------
+  document.getElementById('btnApplyRebal').addEventListener('click', function(){
+    var list=P.getPortfolio(); var s=P.summary();
+    var recs=[];
+    list.forEach(function(f){
+      var inp=document.getElementById('tgt_'+f.code); var v=inp?parseFloat(inp.value):NaN; if(isNaN(v)) return;
+      var t=v/100; var est;
+      if(f.isStock){ var price=(f.live&&f.live.price)?f.live.price:f.price; est=f.shares?f.shares*price:f.amount; }
+      else { var gz=(f.live&&f.live.gszzl!=null)?parseFloat(f.live.gszzl):0; est=f.amount*(1+gz/100); }
+      var diff=t*s.totalValue-est;
+      if(Math.abs(diff)<s.totalValue*0.005) return;
+      var side=diff>0?'buy':'sell';
+      var rec={code:f.code, name:f.name, side:side, amount:Math.abs(diff)};
+      if(f.isStock && (f.live&&f.live.price)) rec.shares=Math.abs(diff)/f.live.price;
+      recs.push(rec);
+    });
+    if(!recs.length){ alert('当前各持仓已接近目标，无需调仓。'); return; }
+    recs.forEach(function(r){ P.recordTxn({ts:Date.now(), code:r.code, name:r.name, side:r.side, amount:r.amount, shares:r.shares?Math.round(r.shares):0}); });
+    P.refresh();
+    document.getElementById('syncInfo').textContent='✓ 已记录 '+recs.length+' 笔调仓交易';
+  });
+  document.getElementById('btnClearTargets').addEventListener('click', function(){ P.clearTargets(); });
+
+  // ---------- 绑定 & 初始渲染 ----------
+  window.__refreshPortfolioUI = renderUI;
+  P.onChange(renderUI);
+  renderUI();
+})();
+</script>
+
 </body>
 </html>
