@@ -32,7 +32,8 @@ window.DASHBOARD_DATA = {
             "先进封装",
             "内存"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-07-10"
         },
         {
           "id": "danbin",
@@ -62,7 +63,8 @@ window.DASHBOARD_DATA = {
             "商业航天",
             "生物制药"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-07-10"
         },
         {
           "id": "duanyongping",
@@ -92,7 +94,8 @@ window.DASHBOARD_DATA = {
             "泡泡玛特",
             "高质量现金流"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-07-10"
         },
         {
           "id": "cathiewood",
@@ -122,7 +125,8 @@ window.DASHBOARD_DATA = {
             "太空",
             "数字资产"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-07-08"
         },
         {
           "id": "dalio",
@@ -151,7 +155,8 @@ window.DASHBOARD_DATA = {
             "分散配置",
             "长债谨慎"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-06-20"
         },
         {
           "id": "xueqiu",
@@ -181,7 +186,8 @@ window.DASHBOARD_DATA = {
             "人形机器人",
             "固态电池"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-07-10"
         },
         {
           "id": "honghao",
@@ -210,7 +216,8 @@ window.DASHBOARD_DATA = {
             "黄金(中长期)",
             "均值回归"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-07-05"
         },
         {
           "id": "lidaxiao",
@@ -239,7 +246,8 @@ window.DASHBOARD_DATA = {
             "蓝筹",
             "防御"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-07-01"
         },
         {
           "id": "howardmarks",
@@ -268,7 +276,8 @@ window.DASHBOARD_DATA = {
             "信用/私募信贷谨慎",
             "防御"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-06-15"
         },
         {
           "id": "fupeng",
@@ -297,7 +306,8 @@ window.DASHBOARD_DATA = {
             "核心资产",
             "防御"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-06-20"
         },
         {
           "id": "libei",
@@ -325,7 +335,8 @@ window.DASHBOARD_DATA = {
             "消费龙头",
             "低估值防御"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-06-15"
         },
         {
           "id": "linyuan",
@@ -354,7 +365,8 @@ window.DASHBOARD_DATA = {
             "消费龙头",
             "高股息"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-06-20"
         },
         {
           "id": "yangdong",
@@ -383,7 +395,8 @@ window.DASHBOARD_DATA = {
             "地产/建材龙头",
             "防御"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-06-25"
         },
         {
           "id": "buffett",
@@ -412,7 +425,8 @@ window.DASHBOARD_DATA = {
             "防御/耐心",
             "日本商社"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-05-03"
         },
         {
           "id": "druckenmiller",
@@ -441,7 +455,8 @@ window.DASHBOARD_DATA = {
             "铜/黄金硬资产",
             "非美资产"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-05-15"
         },
         {
           "id": "grantham",
@@ -470,7 +485,8 @@ window.DASHBOARD_DATA = {
             "债券",
             "撤离高估值科技"
           ],
-          "fetchable": true
+          "fetchable": true,
+          "viewDate": "2026-05-20"
         }
       ],
       "dailyArticle": {
@@ -508,7 +524,8 @@ window.DASHBOARD_DATA = {
         "先进封装",
         "内存"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-07-10"
     },
     {
       "id": "danbin",
@@ -538,7 +555,8 @@ window.DASHBOARD_DATA = {
         "商业航天",
         "生物制药"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-07-10"
     },
     {
       "id": "duanyongping",
@@ -568,7 +586,8 @@ window.DASHBOARD_DATA = {
         "泡泡玛特",
         "高质量现金流"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-07-10"
     },
     {
       "id": "cathiewood",
@@ -598,7 +617,8 @@ window.DASHBOARD_DATA = {
         "太空",
         "数字资产"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-07-08"
     },
     {
       "id": "dalio",
@@ -627,7 +647,8 @@ window.DASHBOARD_DATA = {
         "分散配置",
         "长债谨慎"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-06-20"
     },
     {
       "id": "xueqiu",
@@ -657,7 +678,8 @@ window.DASHBOARD_DATA = {
         "人形机器人",
         "固态电池"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-07-10"
     },
     {
       "id": "honghao",
@@ -686,7 +708,8 @@ window.DASHBOARD_DATA = {
         "黄金(中长期)",
         "均值回归"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-07-05"
     },
     {
       "id": "lidaxiao",
@@ -715,7 +738,8 @@ window.DASHBOARD_DATA = {
         "蓝筹",
         "防御"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-07-01"
     },
     {
       "id": "howardmarks",
@@ -744,7 +768,8 @@ window.DASHBOARD_DATA = {
         "信用/私募信贷谨慎",
         "防御"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-06-15"
     },
     {
       "id": "fupeng",
@@ -773,7 +798,8 @@ window.DASHBOARD_DATA = {
         "核心资产",
         "防御"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-06-20"
     },
     {
       "id": "libei",
@@ -801,7 +827,8 @@ window.DASHBOARD_DATA = {
         "消费龙头",
         "低估值防御"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-06-15"
     },
     {
       "id": "linyuan",
@@ -830,7 +857,8 @@ window.DASHBOARD_DATA = {
         "消费龙头",
         "高股息"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-06-20"
     },
     {
       "id": "yangdong",
@@ -859,7 +887,8 @@ window.DASHBOARD_DATA = {
         "地产/建材龙头",
         "防御"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-06-25"
     },
     {
       "id": "buffett",
@@ -888,7 +917,8 @@ window.DASHBOARD_DATA = {
         "防御/耐心",
         "日本商社"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-05-03"
     },
     {
       "id": "druckenmiller",
@@ -917,7 +947,8 @@ window.DASHBOARD_DATA = {
         "铜/黄金硬资产",
         "非美资产"
       ],
-      "fetchable": true
+      "fetchable": true,
+      "viewDate": "2026-05-15"
     },
     {
       "id": "grantham",
@@ -945,6 +976,234 @@ window.DASHBOARD_DATA = {
         "黄金/白银",
         "债券",
         "撤离高估值科技"
+      ],
+      "fetchable": true,
+      "viewDate": "2026-05-20"
+    },
+    {
+      "id": "lynalden",
+      "name": "Lyn Alden 林恩·奥尔登",
+      "short": "Lyn Alden",
+      "alias": "宏观策略师 / Lyn Alden Investment Strategy",
+      "platform": "X / 播客 / newsletter",
+      "region": "国际",
+      "emoji": "🌐",
+      "stance": "结构性",
+      "theme": "财政主导 · 流动性 · 真实资产",
+      "summary": "提出美国进入'财政主导'时代：结构性赤字而非央行政策驱动通胀与名义GDP。2026-06-21 David Lin 播客指出，当联邦债务超GDP的100%后，加息反而扩大赤字，美联储工具失效，形成'双速经济'。配置上核心持有高质量股票（避开泡沫区）、黄金作永久战略持仓（但两年大涨后先筑底再加）、BTC处低情绪区。AI方面与黄金同理——真技术但来得太快，部分交易会从高位裂开后修复。整体建议持有高质量稀缺资产，从狂热领域再平衡到持仓率低的领域。",
+      "highlights": [
+        "财政主导：债务超GDP100%后利率工具失效，加息反而扩大赤字",
+        "核心持有高质量股票+黄金(战略仓)+比特币(低情绪区)，从狂热领域再平衡",
+        "AI与黄金同理：真技术但来太快，部分高位交易会先裂开再修复"
+      ],
+      "returnNote": "2020年起的宏观与比特币框架被市场广泛验证；以研究严谨著称，无公开实盘收益率可查。",
+      "credibility": "高",
+      "date": "2026-07-11",
+      "viewDate": "2026-06-21",
+      "source": "David Lin Report / Kitco / Biggo",
+      "sourceUrl": "https://atmes.ai/videos/did-another-great-depression-just-get-triggered-lyn-alden",
+      "directions": [
+        "黄金 / 避险资产",
+        "高质量现金流",
+        "AI算力基础设施"
+      ],
+      "fetchable": true
+    },
+    {
+      "id": "raoulpal",
+      "name": "Raoul Pal 拉乌尔·帕尔",
+      "short": "Raoul Pal",
+      "alias": "Real Vision 联合创始人",
+      "platform": "X / 播客 / Real Vision",
+      "region": "国际",
+      "emoji": "🌊",
+      "stance": "偏多",
+      "theme": "流动性超级周期 · 加密 · AI",
+      "summary": "「经济奇点」正在逼近，AI是史上最大资本事件，法币贬值下应尽可能持有优质加密资产。2026年多次访谈重申「Everything Code」框架：全球流动性、债务周期、货币贬值驱动一切资产。看好2026-2027流动性超级周期，比特币看高至9万-45万美元区间（取决于流动性），重点配置ETH、SOL、SUI、Zcash、TAO。建议「买入并持有」，不要波段。认为加密相对纳斯达克处于历史低位，是更好复合回报。",
+      "highlights": [
+        "「经济奇点」逼近：AI竞赛是史上最大资本事件，法币贬值下持有优质加密",
+        "Everything Code：全球流动性+债务周期驱动一切；2026-2027流动性超级周期",
+        "看多加密(ETH/SOL/SUI/Zcash/TAO)，买入持有不波段"
+      ],
+      "returnNote": "Real Vision创始人，宏观框架有影响力；加密观点波动大、回撤剧烈，需自担风险。",
+      "credibility": "中",
+      "date": "2026-07-11",
+      "viewDate": "2026-06-15",
+      "source": "When Shift Happens / CryptoNews / HTX",
+      "sourceUrl": "https://www.htx.co.si/zh-cn/news/Market%20Analysis-oJJtgMeC",
+      "directions": [
+        "加密资产",
+        "AI算力基础设施"
+      ],
+      "fetchable": true
+    },
+    {
+      "id": "howell",
+      "name": "Michael Howell 迈克尔·豪威尔",
+      "short": "Howell",
+      "alias": "CrossBorder Capital / Global Liquidity Index 创始人",
+      "platform": "X / 播客 / 研报",
+      "region": "国际",
+      "emoji": "💧",
+      "stance": "偏空",
+      "theme": "全球流动性见顶 · 风险资产转弱",
+      "summary": "全球流动性周期（65个月正弦波）已在2025年底触顶、2026年开始回落，预计向2027年下行。认为标普年末水平低于当前的概率高，风险资产进入动荡期但尚未到达。建议：减信用、减「顶部切片」股票、持有商品、建现金、看长债；黄金与比特币作货币贬值对冲，但逢低买（低于趋势20-25%再加）。中国流动性与全球错位上行，利好中国股票与商品。2026是「零和」——强实体经济从金融市场抽走流动性。",
+      "highlights": [
+        "全球流动性65个月周期2025底触顶、2026回落，标普年末或低于当前",
+        "配置：减信用/减顶部股票、持商品、建现金、看长债；黄金BTC逢低买",
+        "中国流动性错位上行，利好中国股票与全球商品"
+      ],
+      "returnNote": "全球流动性研究权威，框架被机构广泛引用；判断偏宏观择时，实操需结合个股。",
+      "credibility": "高",
+      "date": "2026-07-11",
+      "viewDate": "2026-06-10",
+      "source": "Thoughtful Money / Investing.com / Roger Montgomery",
+      "sourceUrl": "https://www.buysidedigest.com/podcast/alert-liquidity-has-peaked-that-means-lower-stock-prices-ahead-michael-howell",
+      "directions": [
+        "黄金 / 避险资产",
+        "红利 / 低估值 / 防御板块"
+      ],
+      "fetchable": true
+    },
+    {
+      "id": "boyle",
+      "name": "Patrick Boyle 帕特里克·博伊尔",
+      "short": "Boyle",
+      "alias": "前对冲基金经理 / 金融YouTuber（伦敦国王学院）",
+      "platform": "YouTube / Prof G Markets",
+      "region": "国际",
+      "emoji": "📉",
+      "stance": "偏空",
+      "theme": "估值泡沫 · IPO乱象",
+      "summary": "以「估值警察」著称，2026年持续警示泡沫。称SpaceX IPO（2026-06-12，代码SPCX）是「烧钱炉」——一季度营收47亿却净亏43亿、累计亏370亿，却按125倍市销率定价、15天闪电纳入纳指100，把被动资金变内部人退出流动性。指出伟大公司也可能因高价成糟糕投资，提醒散户警惕「全额配售」的反向信号（机构不要的才给你）。历史类比：思科2000见顶后25年才创新高。",
+      "highlights": [
+        "SpaceX IPO=「烧钱炉」：125倍市销率、15天闪电入纳指100，被动资金成退出流动性",
+        "伟大公司≠好投资，高价买入即糟糕；警惕「全额IPO配售」反向信号",
+        "思科2000见顶后25年才回本——革命性技术也会严重高估"
+      ],
+      "returnNote": "金融科普YouTube人气高、逻辑清晰；偏空头视角，对泡沫期有很强警示价值。",
+      "credibility": "中",
+      "date": "2026-07-11",
+      "viewDate": "2026-06-12",
+      "source": "Prof G Markets / Patrick Boyle On Finance (YouTube)",
+      "sourceUrl": "https://rosetta.to/u/pboyle/spacex-the-most-expensive-ipo-in-history",
+      "directions": [
+        "红利 / 低估值 / 防御板块"
+      ],
+      "fetchable": true
+    },
+    {
+      "id": "xuyaanshi",
+      "name": "许愿石",
+      "short": "许愿石",
+      "alias": "雪球实战派（A股30年）",
+      "platform": "雪球",
+      "region": "国内",
+      "emoji": "🪨",
+      "stance": "结构性",
+      "theme": "抱团松动 · 科技缩圈 · 监管降温",
+      "summary": "2026-07-02 发文《抱团松动与科技缩圈》，指出三重信号共振：①监管实质性收紧，每日数十家公司发异动/风险公告，划清题材炒作边界；②海外算力叙事裂痕（Meta拟出售/转租部分算力，动摇「算力无限需求」假设），A股硬科技抱团应声松动；③居民存款现搬家迹象。判断牛市下半场从「普涨」转向「缩圈」，建议降低高拥挤科技仓位、向有业绩支撑与低位修复方向再平衡，并如实记录自身组合调整与心态。",
+      "highlights": [
+        "三重信号：监管降温+海外算力过剩叙事裂痕+居民存款搬家",
+        "科技抱团松动、行情从普涨转向「缩圈」，高拥挤方向需降仓",
+        "牛市下半场向有业绩支撑与低位修复方向再平衡"
+      ],
+      "returnNote": "雪球人气实战派，以坦诚记录组合与心态著称；偏谨慎，适合作为「过热警示」对照。",
+      "credibility": "中",
+      "date": "2026-07-11",
+      "viewDate": "2026-07-02",
+      "source": "雪球",
+      "sourceUrl": "https://xueqiu.com/3001257315/398034195",
+      "directions": [
+        "AI算力基础设施",
+        "红利 / 低估值 / 防御板块"
+      ],
+      "fetchable": true
+    },
+    {
+      "id": "taoge",
+      "name": "濤哥",
+      "short": "濤哥",
+      "alias": "今日头条财经创作者",
+      "platform": "今日头条",
+      "region": "国内",
+      "emoji": "📺",
+      "stance": "结构性",
+      "theme": "结构慢牛 · 业绩验证",
+      "summary": "2026-07-04 发文《2026下半年A股定调》：综合十几家公募券商中期策略，认为下半年大概率延续「震荡上行、结构分化」，全面普涨可排除；行情驱动力从上半年的估值扩张切换到实打实的业绩验证。AI仍是确定性最高的产业主线，但「闭眼买都涨」的普涨结束，进入业绩分化期。需警惕三大风险：交易拥挤、业绩证伪、外部扰动。核心判断：科技仍为主线但内部分化加剧，再平衡创造机会，防御配置不可少。",
+      "highlights": [
+        "下半年结构慢牛：震荡上行、分化加剧，全面普涨可排除",
+        "AI仍主线但进入「业绩验证期」，闭眼普涨结束",
+        "三大风险：交易拥挤、业绩证伪、外部扰动；防御配置不可少"
+      ],
+      "returnNote": "头条财经人气创作者，观点综合机构策略、接地气；偏中性实务派。",
+      "credibility": "中",
+      "date": "2026-07-11",
+      "viewDate": "2026-07-04",
+      "source": "今日头条",
+      "sourceUrl": "https://www.toutiao.com/article/7658631236188897832",
+      "directions": [
+        "AI算力基础设施",
+        "红利 / 低估值 / 防御板块",
+        "人形机器人产业链"
+      ],
+      "fetchable": true
+    },
+    {
+      "id": "jinxi",
+      "name": "金喜连连",
+      "short": "金喜连连",
+      "alias": "今日头条财经网红",
+      "platform": "今日头条",
+      "region": "国内",
+      "emoji": "🔥",
+      "stance": "偏多",
+      "theme": "极致看多AI全产业链",
+      "summary": "2026-07-01 发文：认为下半年A股没有新主线、没有风格切换，贯穿整轮行情的核心赛道「有且只有AI全产业链」。当前震荡是新主升浪前的最后一次挖坑洗盘，丢掉AI筹码将踏空整轮翻倍行情。最看好半导体存储产业链（产业通胀周期、三季度国产算力产能释放）。建议不追高、逢急跌分批低吸、重仓核心龙头。观点极乐观，属典型「多头网红」声音，宜与谨慎派对照看。",
+      "highlights": [
+        "下半年唯一核心赛道=AI全产业链，当前震荡是主升浪前洗盘",
+        "最看好半导体存储：产业通胀+三季度国产算力产能释放",
+        "不追高、急跌分批低吸、重仓核心龙头（极乐观多头视角）"
+      ],
+      "returnNote": "头条财经网红，观点极乐观、煽动性强；属「多头声音」代表，需与谨慎派交叉验证，勿盲从。",
+      "credibility": "低",
+      "date": "2026-07-11",
+      "viewDate": "2026-07-01",
+      "source": "今日头条",
+      "sourceUrl": "https://www.toutiao.com/article/7657224465956291095/",
+      "directions": [
+        "AI算力基础设施",
+        "半导体存储",
+        "人形机器人产业链"
+      ],
+      "fetchable": true
+    },
+    {
+      "id": "chenguo",
+      "name": "陈果",
+      "short": "陈果",
+      "alias": "东方财富证券研究所副所长 / 首席策略官",
+      "platform": "公开演讲 / 澎湃",
+      "region": "国内",
+      "emoji": "🎯",
+      "stance": "偏多",
+      "theme": "指数上行空间>下行 · 结构更平衡",
+      "summary": "2026-06-10 表示，沪指已从4259高点调整三百多点，无论外部如何动荡战略上不能再看空大A，「未来一个季度指数上涨空间将远大于下跌空间」，应先积极寻找结构做多方向。认为下一轮上升行情风格更平衡（不再像5月极致），在科技股中「去伪存真」，精选营收盈利增速今年不见顶+市值未透支+中报有望超预期+明年盈利预期不下的优质中国AI产业链公司。同时看好碳基龙头、新老能源、金融地产、新消费与互联网龙头的系统重估。",
+      "highlights": [
+        "「未来一个季度指数上行空间远大于下跌空间」，战略不再看空大A",
+        "下一轮风格更平衡，科技股去伪存真、精选优质AI产业链",
+        "看好碳基龙头、新老能源、金融地产、新消费与互联网重估"
+      ],
+      "returnNote": "东方财富首席策略，机构口径、市场影响力大；2024-2025年多次精准提示结构机会。",
+      "credibility": "高",
+      "date": "2026-07-11",
+      "viewDate": "2026-06-10",
+      "source": "澎湃新闻 / 东方财富",
+      "sourceUrl": "https://www.163.com/dy/article/KV2FJNRQ0514R9P4.html",
+      "directions": [
+        "AI算力基础设施",
+        "红利 / 低估值 / 防御板块",
+        "人形机器人产业链"
       ],
       "fetchable": true
     }

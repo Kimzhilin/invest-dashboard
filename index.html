@@ -43,6 +43,8 @@
   .card .al{color:var(--muted);font-size:11.5px;margin-top:1px;}
   .card .meta{margin-left:auto;text-align:right;font-size:11px;color:var(--muted);flex:none;}
   .tags{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0 10px;}
+  .vdate{display:inline-block;background:#eef6ff;border:1px solid #cfe2ff;color:#0b62d0;font-weight:700;font-size:12.5px;padding:3px 10px;border-radius:999px;margin:2px 0 9px;}
+  .vdate.old{background:#fff4ec;border-color:#f3d2b8;color:#b5560a;}
   .tag{font-size:11px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted);}
   .tag.stance{color:#fff;border:none;font-weight:600;}
   .s-bull{background:var(--bull)} .s-bear{background:var(--bear)} .s-struct{background:var(--struct)} .s-neutral{background:var(--neutral)}
@@ -234,6 +236,8 @@
   }
 
   var stanceClass = {"偏多":"s-bull","偏空":"s-bear","结构性":"s-struct","中性":"s-neutral"};
+  function fmtMD(s){ if(!s) return "未知"; var m=/(\d{4})-(\d{2})-(\d{2})/.exec(s); return m ? (parseInt(m[2],10)+"月"+parseInt(m[3],10)+"日") : s; }
+  function isStale(s){ if(!s) return false; var m=/(\d{4})-(\d{2})-(\d{2})/.exec(s); if(!m) return false; var d=new Date(+m[1],+m[2]-1,+m[3]); return (Date.now()-d.getTime())/86400000 > 30; }
 
   // ---- 时间日历 / 历史快照 ----
   var RET = D.retentionDays || 7;
@@ -284,10 +288,13 @@
     el.setAttribute('data-region', p.region);
     var hl = (p.highlights||[]).map(function(h){return '<li>'+h+'</li>';}).join('');
     var dirs = (p.directions||[]).map(function(d){return '<span class="dir">'+d+'</span>';}).join('');
+    var vd = fmtMD(p.viewDate || p.date);
+    var stale = isStale(p.viewDate || p.date);
     el.innerHTML =
       '<div class="hd"><div class="ava">'+p.emoji+'</div>'+
         '<div><div class="nm">'+p.name+'</div><div class="al">'+p.alias+'</div></div>'+
         '<div class="meta">'+p.platform+'<br>'+p.region+'</div></div>'+
+      '<div class="vdate'+(stale?' old':'')+'">📅 观点发布：'+vd+(stale?' · 已超30天':'')+'</div>'+
       '<div class="tags"><span class="tag stance '+(stanceClass[p.stance]||'s-neutral')+'">'+p.stance+'</span>'+
         '<span class="tag">'+p.theme+'</span>'+
         '<span class="tag cred">可信度 '+p.credibility+'</span></div>'+
@@ -295,7 +302,7 @@
       '<ul class="hl">'+hl+'</ul>'+
       '<div class="ret"><b>收益/标注：</b>'+p.returnNote+'</div>'+
       '<div class="dirs">'+dirs+'</div>'+
-      '<div class="src"><span>'+p.date+' · '+p.source+'</span>'+
+      '<div class="src"><span>📡 '+p.source+'</span>'+
         (p.sourceUrl?'<a href="'+p.sourceUrl+'" target="_blank" rel="noopener">看原文 ↗</a>':'')+'</div>';
     feed.appendChild(el);
   });
