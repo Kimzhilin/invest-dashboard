@@ -1547,17 +1547,17 @@ window.DASHBOARD_DATA = {
           "emoji": "🌐",
           "stance": "偏多",
           "theme": "AI大加速 · 颠覆性创新",
-          "summary": "Cathie Wood 8月1-3日连续调仓：8/1买入CoreWeave与Circle，8/3大举买入亚马逊、CoreWeave、Coinbase、Cerebras，同时卖出Roblox、10X Genomics与部分AMD，组合继续向“AI基础设施+数字资产”集中。她维持长期看多AI/机器人/区块链的叙事，认为本轮抛售提供加仓机会，但调仓显示对单一持仓（如AMD）的取舍更趋积极。",
+          "summary": "木头姐 8月5日(周三)最新调仓：ARK 大举买入英伟达 80,415 股(约1,760万美元)与 SpaceX 私募份额 181,830 股(约1,969万美元)，延续对AI算力与太空基建的加码；同时减持 Roblox(46.7万股)、Palantir(7.0万股)与 Shopify(8.9万股)。其长期看多 AI/数字资产/颠覆性创新的叙事不变，但单日买卖切换显示对高估值标的主动再平衡、借波动加仓核心资产。",
           "highlights": [
-            "8/1：买入CoreWeave与Circle；8/3：买入亚马逊/CoreWeave/Coinbase/Cerebras",
-            "同期卖出Roblox、10X Genomics与部分AMD，组合向AI基建+数字资产集中",
-            "长期看多AI/机器人/区块链不变，抛售即加仓；对AMD等取舍更积极"
+            "8/5：ARK 买入英伟达 80,415 股(约1,760万) + SpaceX 181,830 股(约1,969万)，加码AI算力与太空",
+            "同期减持 Roblox 46.7万/Palantir 7.0万/Shopify 8.9 万股，组合向高置信度核心集中",
+            "长期看多 AI/机器人/区块链不变；借 Space 财报后暴跌主动加仓，对高估值标的再平衡更积极"
           ],
-          "returnNote": "ARK系列ETF历史波动大（未独立验证）；长期看多但择时争议大，注意高波动与集中持仓。",
+          "returnNote": "ARK系列ETF历史波动大(未独立验证)；长期看多但择时争议大，注意高波动与集中持仓。8/5交易为每日披露，数据经 Yahoo/Investing.com 等转述。",
           "credibility": "中",
           "date": "2026-08-08",
-          "source": "Ark Invest 交易披露 / Yahoo Finance（2026-08-03）",
-          "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/cathie-wood-expects-volatile-bitcoin-184500107.html",
+          "source": "ARK 交易披露 / Yahoo Finance / Investing.com（2026-08-05）",
+          "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/cathie-wood-invests-17-6-171219191.html",
           "directions": [
             "AI基础设施",
             "机器人",
@@ -1566,7 +1566,7 @@ window.DASHBOARD_DATA = {
             "数字资产"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-03"
+          "viewDate": "2026-08-05"
         },
         {
           "id": "dalio",
@@ -1608,17 +1608,17 @@ window.DASHBOARD_DATA = {
           "emoji": "📊",
           "stance": "结构性",
           "theme": "AI硬件链分化 · CPO · 存储",
-          "summary": "雪球8月5日热门讨论聚焦“玻璃基板+先进封装”材料革命：用户指出AI算力军备竞赛下，PCB正从被动承载板向主动算力核心底座跃迁，高频高速材料（碳氢/PPO/PTFE树脂）、玻璃基板与先进封装（CoWoS/混合键合）成为国产替代与价值重估的关键环节；资金在科技树内部从过热枝桠向材料端、封装端轮动。讨论延续“科技树轮动”框架，强调材料端的确定性大于纯题材。",
+          "summary": "雪球8月6日前后热议“磷化铟(InP)供给缺口”：Lumentum CEO 公开警示 InP 供需缺口已超过 DRAM/NAND 等存储芯片，正成为制约 AI 数据中心光互联扩展的核心瓶颈；英伟达预测 2026—2030 年 InP 晶圆需求将激增约 20 倍，Lumentum 测算 AI 数据中心 InP 需求 CAGR 达 85%。讨论指向光模块/CPO 上游材料端(衬底-外延-光芯片)成为比 GPU 更“卡脖子”的环节，供给寡头垄断(住友/AXT/JX 三家占高端产能90%)+中国铟出口管制令缺口短期难解。",
           "highlights": [
-            "8/5：雪球热议“玻璃基板+先进封装”材料革命，PCB向主动算力底座跃迁",
-            "高频高速树脂/玻璃基板/CoWoS混合键合成国产替代与价值重估关键",
-            "资金在科技树内从过热枝桠向材料端、封装端轮动，材料确定性大于纯题材"
+            "8/6：Lumentum CEO 称 InP 缺口超 DRAM/NAND，成 AI 光互联核心瓶颈；英伟达预计2026-30晶圆需求+20倍",
+            "供给端寡头垄断(住友42%/AXT 35%/JX 13%占高端90%)+中国铟出口管制，缺口70%+、延续至2027后",
+            "投资主线从GPU转向“光之地基”：InP衬底/外延/光芯片国产替代与价值重估，材料确定性>纯题材"
           ],
-          "returnNote": "涨幅/股价数据来自每日经济新闻、新浪财经、腾讯行情(2026-08-04)，未独立验证；雪球共识为社区聚合，非单一权威来源。注意板块高波动与拥挤交易风险。",
+          "returnNote": "雪球共识为社区聚合非单一权威；InP 缺口数据来自 Lumentum/高盛/Yole 等研报转述(未独立验证)。注意板块高波动与拥挤交易风险。",
           "credibility": "中",
           "date": "2026-08-08",
-          "source": "雪球热门（2026-08-05）",
-          "sourceUrl": "https://xueqiu.com/403917486",
+          "source": "雪球热门（2026-08-06）",
+          "sourceUrl": "https://xueqiu.com/1445657263/403592931",
           "directions": [
             "国产存储",
             "先进封装",
@@ -1627,7 +1627,7 @@ window.DASHBOARD_DATA = {
             "固态电池"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-05"
+          "viewDate": "2026-08-06"
         },
         {
           "id": "honghao",
@@ -1816,19 +1816,19 @@ window.DASHBOARD_DATA = {
           "platform": "宁泉半年投资汇报 / 公开信",
           "region": "国内",
           "emoji": "🛑",
-          "stance": "偏空",
+          "stance": "结构性",
           "theme": "全球AI泡沫预警 · 低估值高分红",
-          "summary": "百亿私募宁泉资产创始人，以精准预判顶部著称。6月《2026半年投资汇报》向持有人致歉：低估了AI基建泡沫，产品遭遇成立以来最大回撤。明确警示当前AI泡沫为全球性质(巴菲特指标美国已超240%)，A股大量热门股未来极可能跌掉八成至九成，'我们没有能力火中取栗'选择全程回避。当前持仓两大方向：低估值高分红绩优企业(电信/家电/电力/金融/化工)与重度低迷周期(地产/建材/光伏龙头)。",
+          "summary": "宁泉资产杨东的最新持仓披露与私募月报(8月8日)显示其“防御中择机布局AI应用”的微妙转向：截至7月31日，宁泉致远39号持有洲明科技 539 万股(较一季度增持10万股)，洲明科技主打LED显示+企业级具身智能体平台，属AI应用端。同期头部私募整体从单一算力基建驱动转向“上游应用+下游算力”更平衡布局。杨东仍坚定警示全球AI泡沫(巴菲特指标美股超240%)并全程回避高估值AI算力，但低估值高分红框架下开始纳入AI应用标的，印证其“没有能力火中取栗”的耐心钱定位。",
           "highlights": [
-            "热门股或跌80-90%：无需等需求放缓或供给放量，仅估值透支就足以引发崩溃，量化+信息加速让崩塌更难预测",
-            "持仓一：低估值高分红、现金流好(电信/家电/电力/金融/化工)，未来终会估值修复",
-            "持仓二：重度低迷周期(地产开发/建材/光伏龙头)，认为一线城市房价已企稳、二手房成交活跃"
+            "8/8：宁泉致远39号截至7/31持有洲明科技539万股(环比+10万)，洲明=LED+具身智能体平台(AI应用)",
+            "私募整体从“算力基建单驱”转向“AI应用+下游算力”更平衡布局，定价锚从情绪/涨价转向订单利润现金流",
+            "杨东仍警示全球AI泡沫、回避高估值算力，但防御框架内纳入AI应用，“耐心钱”定位不变"
           ],
-          "returnNote": "宁泉产品2026上半年业绩不佳、6月回撤创纪录；但历史上多次精准预警顶部，观点以风控价值见长。",
+          "returnNote": "宁泉2026上半年业绩不佳、回撤创纪录；但历史上多次精准预警顶部，风控价值见长。洲明科技持股为公告披露(截至7/31)，非杨东本人新喊话。",
           "credibility": "高",
           "date": "2026-08-08",
-          "source": "新浪 / 格隆汇 / 金融界",
-          "sourceUrl": "https://cj.sina.com.cn/articles/view/5278967580/13aa6a71c00101jse8",
+          "source": "新浪财经 / 上海证券报（2026-08-08）",
+          "sourceUrl": "https://finance.sina.com.cn/roll/2026-08-08/doc-inimpspv2922308.shtml",
           "directions": [
             "低估值高分红",
             "电信/电力/家电",
@@ -1836,7 +1836,7 @@ window.DASHBOARD_DATA = {
             "防御"
           ],
           "fetchable": true,
-          "viewDate": "2026-06-25"
+          "viewDate": "2026-08-08"
         },
         {
           "id": "buffett",
@@ -1938,18 +1938,18 @@ window.DASHBOARD_DATA = {
           "emoji": "🌐",
           "stance": "结构性",
           "theme": "财政主导 · 流动性 · 真实资产",
-          "summary": "提出美国进入“财政主导”时代：结构性赤字而非央行政策驱动通胀与名义GDP。2026年7月9日Coin Stories播客指出，BTC当前处于情绪最弱区间、“没有援军”，而AI资本开支正抽干市场流动性；重申“39万亿美元债务地震”下BTC长期看15万美元（财政主导逻辑）。核心持有高质量股票（避开泡沫区）、黄金作永久战略持仓、BTC处低情绪区。整体建议从狂热领域再平衡到持仓率低的领域。",
+          "summary": "Lyn Alden 将其“财政主导”与“货币贬值”宏观理论落地为实盘：联合创办的永久资本控股公司 Orange Juice Holdings 于7月16日完成 4,000万美元种子轮融资，拟收购年收入100万-1000万美元、现金流为正的美国小企业，用AI辅助运营、将留存收益作为比特币储备，目标未来上市(类“主街版MicroStrategy”)。墨西哥亿万富豪 Ricardo Salinas 领投，共同创始人含《The Price of Tomorrow》作者 Jeff Booth。此举标志其从“commentary”转向“execution”，用真实经营现金流+比特币储备对抗法币贬值。",
           "highlights": [
-            "财政主导：债务超GDP100%后利率工具失效，加息反而扩大赤字",
-            "7/9 Coin Stories：BTC情绪最弱、“无援军”，AI资本开支抽干流动性；“39万亿债务地震”下BTC长期看15万美元",
-            "核心持有高质量股票+黄金(战略仓)+比特币(低情绪区)，从狂热领域再平衡"
+            "7/16：Orange Juice Holdings 完成4000万美元种子轮，收购现金流为正美国小企业、留存收益转比特币储备",
+            "联合创始人含 Jeff Booth，墨西哥富豪 Ricardo Salinas 领投，目标上市(主街版MicroStrategy)",
+            "从“财政主导”理论走向实盘：经营现金流+BTC储备对抗货币贬值，长期看多2026-27"
           ],
-          "returnNote": "2020年起的宏观与比特币框架被市场广泛验证；以研究严谨著称，无公开实盘收益率可查。",
+          "returnNote": "2020年起的宏观与比特币框架被广泛验证；Orange Juice 为新建实体、业绩待观察，注意早期风险。",
           "credibility": "高",
           "date": "2026-08-08",
-          "viewDate": "2026-07-09",
-          "source": "David Lin Report / Kitco / Biggo",
-          "sourceUrl": "https://atmes.ai/videos/did-another-great-depression-just-get-triggered-lyn-alden",
+          "viewDate": "2026-07-16",
+          "source": "CoinDesk / BingX（2026-07-16）",
+          "sourceUrl": "https://bingx.com/en/flash-news/post/lyn-alden-cofounds-orange-juice-holdings-closes-m-seed-round-for-bitcoin-treasury-strategy",
           "directions": [
             "黄金 / 避险资产",
             "高质量现金流",
