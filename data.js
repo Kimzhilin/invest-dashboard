@@ -15,17 +15,17 @@ window.DASHBOARD_DATA = {
           "emoji": "👩‍🦳",
           "stance": "结构性",
           "theme": "AI算力 · 光通信 · 瓶颈标的",
-          "summary": "白毛女神7月31日汇总亚马逊/Meta/谷歌/微软四大巨头最新财报的资本开支指引：2026年合计约7200-7450亿美元，高于市场此前预期的6950-7250亿，并直言本轮\"AI抛售严重过度\"。她拆解微软季度capex 410亿、下季指引超500亿、全年约1750亿且2027年不减，Meta capex收窄至1300-1450亿但CFO称\"算力稀缺到可以倒卖赚钱\"，认为Meta盘后-9%是短期指引保守+法律计提+去杠杆踩踏，而非AI叙事崩塌。重申\"瓶颈投资\"：存储芯片、能源基础设施等过去被视为低价值的供应链环节将迎来估值重塑。",
+          "summary": "白毛女神8月8日最新发帖\"AI存储股5折大促销\"：美光/闪迪/SK海力士/三星/西数年内回撤35%-53%，但她强调\"买的是AI铲子、结果买到周期股\"，AI数据中心并未停（云厂商仍在砸钱、HBM仍缺、SSD仍在涨价、英伟达故事没结束）。她不去赌存储反弹，而是继续找AI基建里\"最容易卡住的位置\"：CPO/硅光子（LITE、SIVE、AAOI、Lumentum付4350万美元定金锁产能）、电力（Bloom Energy Q2收入同比+166%）。复盘7月组合单月回撤49.4%源于约1.4倍杠杆+重押存储/光子学平均跌35%，称\"最烦跌了就喊赶紧卖的人\"，只要营收加速+超大规模CAPEX同步、方向没变就无需恐慌。",
           "highlights": [
-            "7/31：四巨头2026年capex合计7200-7450亿美元高于预期，定性AI抛售「严重过度」",
-            "Meta盘后-9%源于短期指引保守+法律计提+去杠杆踩踏，非AI叙事崩塌",
-            "瓶颈投资逻辑：存储芯片/能源基建等低价值供应链环节将迎估值重塑，短期调整或仍持续"
+            "8/8：发帖\"AI存储股5折大促销\"，美光/闪迪/海力士/三星回撤35%-53%，但称数据中心未停、HBM仍缺、英伟达故事未结束",
+            "继续找\"卡脖子\"位置：CPO/硅光子(LITE/SIVE/AAOI)+电力(Bloom Energy收入+166%)，不赌存储单纯反弹",
+            "复盘7月组合回撤49.4%源于1.4倍杠杆+存储/光子学重仓，重申方向没变、营收加速与CAPEX同步即不恐慌"
           ],
-          "returnNote": "自称年内45倍/总225倍（未独立验证）；2026-07公开组合回撤约49%，但喊单再掀涨停。注意吹票争议与幸存者偏差。",
+          "returnNote": "自称年内45倍/总225倍（未独立验证，标\"未独立验证\"）；7月公开组合回撤约49.4%（约1.4倍杠杆+存储/光子学重仓），吹票争议与幸存者偏差仍需注意。",
           "credibility": "中",
-          "date": "2026-08-03",
-          "source": "雪球 / Odaily / trackserenity（2026-07-31）",
-          "sourceUrl": "https://xueqiu.com/6600079272/402763052",
+          "date": "2026-08-08",
+          "source": "Odaily星球日报 / OKX Orbit（2026-08-08，整理自X）",
+          "sourceUrl": "https://www.okx.com/ru/orbit/post/83301959148576",
           "directions": [
             "AI光通信",
             "CPO",
@@ -33,7 +33,7 @@ window.DASHBOARD_DATA = {
             "内存"
           ],
           "fetchable": true,
-          "viewDate": "2026-07-31"
+          "viewDate": "2026-08-08"
         },
         {
           "id": "danbin",
@@ -53,7 +53,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "旗下产品2026H1业绩曾领跑（未独立验证）；7月科技回撤中产品明显回撤但仍满仓逆向。注意单一风格与高波动、「2倍做多海力士」等杠杆产品风险。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "网易财经 / 凤凰网 / 雪球（2026-08-01）",
           "sourceUrl": "https://www.163.com/dy/article/L380QK530556MG0M.html",
           "directions": [
@@ -84,7 +84,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "泡泡玛特持仓市值/比例来自港交所披露与媒体报道（未独立验证）；卖Put属进阶策略、有被行权人义务，普通投资者慎仿。注意单一标的集中度风险。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "今日头条 / 腾讯网（2026-08-03）",
           "sourceUrl": "https://www.toutiao.com/article/7669613571675914767",
           "directions": [
@@ -115,7 +115,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "ARK系列ETF历史波动大（未独立验证）；长期看多但择时争议大，注意高波动与集中持仓。",
           "credibility": "中",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "华尔街见闻 / Yahoo Finance / moomoo",
           "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/cathie-wood-expects-volatile-bitcoin-184500107.html",
           "directions": [
@@ -146,7 +146,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "桥水后时代仍活跃（未独立验证）；黄金配置建议具参考性，但框架偏长周期。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "华尔街见闻 / 网易（2026-08-01 报道 7-30 播客）",
           "sourceUrl": "https://www.163.com/dy/article/L38E8PM405198NMR.html",
           "directions": [
@@ -168,17 +168,17 @@ window.DASHBOARD_DATA = {
           "emoji": "📊",
           "stance": "结构性",
           "theme": "AI硬件链分化 · CPO · 存储",
-          "summary": "雪球8月3日共识聚焦\"AI硬件链剧烈分化\"：英伟达Spectrum-X CPO交换机与博通Bailly CPO正式进入量产，光通信板块上游器件/连接器走强、下游光模块承压；存储涨价潮现裂痕——DRAM二季度涨58-63%、NAND涨70-75%、现货累计涨超300%，但OPPO/vivo已拒接三星三季度报价，大摩警告合约价四季度见顶，韩国存储双雄8/3暴跌（SK海力士-8.9%、三星-8.2%、KOSPI-5.4%）。另，OpenRouter榜单前五全为中国模型（小米MiMo-V2.5登顶），应用端走强。",
+          "summary": "雪球热门共识8月7日捕捉AI逻辑\"下半场\"切换：张晓飞(HTI)团队指出AI新旧动能转换——供给端GPU与存储垄断定价推高全行业CapEx（若净利率从65-80%回归40-50%，全行业CapEx仅约六成），应用端受益于token成本下降与能力性价比提升、加速渗透，云厂无论承接开源/闭源均受益、是当前产业链最清晰方向；摩根士丹利闭门会(8/3)称AI粗放炒作时代终结，核心胜负手从\"押赛道\"转向\"兑现能力\"，盯云厂积压订单、平台云与AI收入增速、硬件订单价格与客户结构、重资产CapEx比例与FCF拐点。雪球8/2投资观察笔记显示分歧：黑貔貅认为AI硬件第一波下跌近尾声（韩国去杠杆7/31结束），metalslime主张买CSP/云/有护城河应用而非死磕硬件。整体\"结构性\"调仓思路延续。",
           "highlights": [
-            "8/3：英伟达Spectrum-X/博通Bailly CPO量产，光通信上游强、下游光模块承压",
-            "存储涨价现裂痕：DRAM二季度+58-63%、现货累涨超300%，但OPPO/vivo拒涨、大摩警告Q4见顶",
-            "韩股8/3暴跌(SK海力士-8.9%/三星-8.2%)；OpenRouter前五全为中国模型，应用端走强"
+            "8/7：张晓飞(HTI)指AI新旧动能转换，云厂（无论开源/闭源）为当前产业链最清晰受益方向，模型层因降价+高投入保持谨慎",
+            "8/3：大摩闭门会称AI粗放炒作终结，胜负手从押赛道转向兑现能力（订单/收入/FCF拐点）",
+            "8/2：雪球笔记分歧——黑貔貅看AI硬件跌近尾声、metalslime主张买CSP/云/应用层而非死磕硬件"
           ],
-          "returnNote": "价格/涨幅数据来自TrendForce、集邦、36氪等公开报道（未独立验证）；雪球共识为社区聚合，非单一权威来源。注意板块高波动与杠杆风险。",
+          "returnNote": "雪球为散户 consensus 聚合，观点有选择性呈现与滞后；具体收益数据多未独立审计（标\"未独立验证\"）。",
           "credibility": "中",
-          "date": "2026-08-03",
-          "source": "雪球 / 36氪 / 腾讯新闻（2026-08-03）",
-          "sourceUrl": "https://www.36kr.com/p/3923168527380105",
+          "date": "2026-08-08",
+          "source": "雪球热门 / 张晓飞策略世界（2026-08-07）",
+          "sourceUrl": "https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-08-07%2Fdoc-inimnvkp4798840.shtml",
           "directions": [
             "国产存储",
             "先进封装",
@@ -187,7 +187,7 @@ window.DASHBOARD_DATA = {
             "固态电池"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-03"
+          "viewDate": "2026-08-07"
         },
         {
           "id": "honghao",
@@ -207,7 +207,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "论坛与闭门会内容经媒体二次整理（未独立验证原话）；\"3个月\"为情景判断非承诺。注意其观点随市场快速调整。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "凤凰湾区财经论坛 / 今日头条（2026-08-03）",
           "sourceUrl": "https://mffb.com.cn/a/544216.html",
           "directions": [
@@ -237,7 +237,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "以「底」系列口号闻名（未独立验证）；观点偏散户保护，注意滞后与阴谋论色彩。",
           "credibility": "中",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "金融界 / 腾讯证券（2026-08-01）",
           "sourceUrl": "https://stock.jrj.com.cn/2026/08/01160357984996.shtml",
           "directions": [
@@ -267,7 +267,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "橡树资本创始人，备忘录广受推崇（未独立验证）；观点偏防御与周期。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "华尔街见闻 / 搜狐 / 腾讯",
           "sourceUrl": "https://wallstreetcn.com/articles/3770564",
           "directions": [
@@ -297,7 +297,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "观点来自私享会纪要（未独立验证原文）；\"缩圈/自由现金流\"为其中期框架，曾在2024-25准确提示风险。注意其偏防守立场。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "TechFlow / 今日头条（2026-08-03）",
           "sourceUrl": "https://www.techflowpost.com/article/32941",
           "directions": [
@@ -327,7 +327,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "半夏投资创始人（未独立验证）；观点鲜明但曾踏空，注意其宏观多空框架。",
           "credibility": "中",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "搜狐 / 腾讯 / 新浪(半夏月报)",
           "sourceUrl": "https://www.sohu.com/a/1042365570_122014422",
           "directions": [
@@ -356,7 +356,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "私募大佬，长期重仓消费（未独立验证）；观点极端集中，注意单一风格。",
           "credibility": "中",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "腾讯新闻/今日头条（2026-07-18）",
           "sourceUrl": "https://new.qq.com/rain/a/20260718A02L2V00?refer=cp_1009",
           "directions": [
@@ -386,7 +386,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "宁泉产品2026上半年业绩不佳、6月回撤创纪录；但历史上多次精准预警顶部，观点以风控价值见长。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "新浪 / 格隆汇 / 金融界",
           "sourceUrl": "https://cj.sina.com.cn/articles/view/5278967580/13aa6a71c00101jse8",
           "directions": [
@@ -416,7 +416,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "伯克希尔现金与持仓为公开披露（相对可验证）；建仓谷歌为新增信号。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "CNBC专访/新浪财经梳理（2026-07-15）",
           "sourceUrl": "https://cj.sina.com.cn/articles/view/7879923015/1d5ae154701901fhw2",
           "directions": [
@@ -446,7 +446,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "Duquesne创始人，宏观交易传奇（未独立验证）；观点偏战术调仓。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "source": "雪球 / SEC 13F / InvestorLens",
           "sourceUrl": "https://xueqiu.com/6505551108/398487202",
           "directions": [
@@ -468,17 +468,17 @@ window.DASHBOARD_DATA = {
           "emoji": "🐻",
           "stance": "偏空",
           "theme": "美股史上最贵 · AI泡沫 · 均值回归",
-          "summary": "87岁的GMO创始人格兰瑟姆8月1日连上财经节目，重申\"美股是美国历史上最贵的市场\"：巴菲特指标达235%（远超2000年153%峰值）、席勒PE约40倍（仅2000年见过）；直言\"AI是有史以来最大的投资泡沫\"，涨势最猛个股或从高点到低点跌70%（2000年纳指从顶到底跌78%）。他建议配置60%非美股（新兴市场/欧洲/日本）、5-10%贵金属、其余债券现金，明确标普500\"不值得配置\"。其GMO 13F却仍重仓微软/谷歌/苹果等巨头，引发\"言行不一\"讨论。",
+          "summary": "格兰瑟姆(87岁)8月初通过雪球长文与市场访谈第三次拉响警报，称美股\"史上最大投资泡沫\"、由AI驱动、下跌70%不意外，明确\"不要持有美国股票\"。他指出泡沫恰恰长在AI这样\"人类最伟大想法\"上（类比铁路改变世界却让铁路股破产），参照系为1989年日本(65倍PE跌二十年)与本次美股约35-40倍、高飞AI股从此位置跌70%毫不稀奇（纳指2000年跌82%）。更尖锐的是他揭示\"行规\"：从1929年起高盛们从未对客户说离开市场，400个全职专家中99%认为必有大熊市、但其所在公司无一家公开说——\"这是一种巨大的信任背叛\"。呼吁在别人连电话都不愿接的恐慌时刻才该出手。",
           "highlights": [
-            "8/1：美股\"史上最贵\"——巴菲特指标235%、席勒PE约40倍；AI\"史上最大泡沫\"，最猛个股或跌70%",
-            "配置建议：60%非美股、5-10%贵金属、其余债券现金，标普500\"不值得配置\"",
-            "GMO 13F仍重仓微软/谷歌/苹果等巨头，\"唱空却持有\"引争议"
+            "8月初：第三次警报称美股\"史上最大泡沫\"、AI驱动、跌70%不意外，直言\"不要持有美国股票\"",
+            "泡沫长在伟大想法上：类比铁路改变世界却让铁路股破产；参照1989日本与本次美股35-40倍PE",
+            "揭示\"行规\"：投行99%专家看跌却无一家公开说，是\"对客户的巨大信任背叛\""
           ],
-          "returnNote": "估值数据来自其访谈与GMO研究（未独立验证）；格兰瑟姆以精准预测泡沫著称但曾多次\"过早看空\"而踏空。注意均值回归时点极不确定。",
+          "returnNote": "格兰瑟姆历史预警纪录佳（2000/2008），但\"喊早了\"常被客户用脚投票；极端估值≠立刻崩，属\"未独立验证\"的长期风险框架。",
           "credibility": "中",
-          "date": "2026-08-03",
-          "source": "今日头条 / 网易（2026-08-01）",
-          "sourceUrl": "https://www.toutiao.com/article/7668720301923992070/",
+          "date": "2026-08-08",
+          "source": "雪球 / 网易游戏（2026-08-07）",
+          "sourceUrl": "https://xueqiu.com/7124507705/403235554",
           "directions": [
             "非美宽基",
             "黄金/白银",
@@ -486,7 +486,7 @@ window.DASHBOARD_DATA = {
             "撤离高估值科技"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-01"
+          "viewDate": "2026-08-07"
         },
         {
           "id": "lynalden",
@@ -498,18 +498,18 @@ window.DASHBOARD_DATA = {
           "emoji": "🌐",
           "stance": "结构性",
           "theme": "财政主导 · 流动性 · 真实资产",
-          "summary": "提出美国进入“财政主导”时代：结构性赤字而非央行政策驱动通胀与名义GDP。2026年7月9日Coin Stories播客指出，BTC当前处于情绪最弱区间、“没有援军”，而AI资本开支正抽干市场流动性；重申“39万亿美元债务地震”下BTC长期看15万美元（财政主导逻辑）。核心持有高质量股票（避开泡沫区）、黄金作永久战略持仓、BTC处低情绪区。整体建议从狂热领域再平衡到持仓率低的领域。",
+          "summary": "Lyn Alden 8月7日就比特币发声：称当前周期比特币投资者信心处于\"最低水平\"，不预期任何外部催化剂（如降息、ETF资金）来\"救\"比特币，强调其长期价值应依赖自身结构性特征（流动性、无许可、价值存储与转移功能）而非外部救世主。她判断四年减半周期正在失效（机构/ETF改变供需、山寨季消失、减半不再是催化剂），年内基准情景\"持平到上涨\"、不预期很快创历史新高，但\"不创新低\"即积极修复信号；长期仍看涨，视比特币为对冲财政赤字/债务螺旋/渐进印钞的最佳资产之一、与黄金互补，建议配置5-10%以上。其\"Orange Juice\"比特币国库项目已募资4000万美元。",
           "highlights": [
-            "财政主导：债务超GDP100%后利率工具失效，加息反而扩大赤字",
-            "7/9 Coin Stories：BTC情绪最弱、“无援军”，AI资本开支抽干流动性；“39万亿债务地震”下BTC长期看15万美元",
-            "核心持有高质量股票+黄金(战略仓)+比特币(低情绪区)，从狂热领域再平衡"
+            "8/7：称比特币当前周期投资者信心最低，不预期外部救世主，价值应靠自身结构性特征（流动性/无许可/价值存储）",
+            "四年减半周期失效论：机构ETF改变供需、山寨季消失、减半不再是催化剂，年内基准\"持平到上涨\"",
+            "长期仍看涨，视BTC为对冲债务/印钞资产、与黄金互补，建议配置5-10%以上；Orange Juice项目募资4000万美元"
           ],
-          "returnNote": "2020年起的宏观与比特币框架被市场广泛验证；以研究严谨著称，无公开实盘收益率可查。",
+          "returnNote": "Alden宏观/BTC研究影响广泛，但BTC价格判断属前瞻性、波动极大（标\"未独立验证\"）；其对M2与BTC近期背离的解释值得关注。",
           "credibility": "高",
-          "date": "2026-08-03",
-          "viewDate": "2026-07-09",
-          "source": "David Lin Report / Kitco / Biggo",
-          "sourceUrl": "https://atmes.ai/videos/did-another-great-depression-just-get-triggered-lyn-alden",
+          "date": "2026-08-08",
+          "viewDate": "2026-08-07",
+          "source": "Brave New Coin / 头条（2026-08-07）",
+          "sourceUrl": "https://bravenewcoin.com/zh-CN/insights/no-cavalry-for-bitcoin",
           "directions": [
             "黄金 / 避险资产",
             "高质量现金流",
@@ -535,7 +535,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "Real Vision创始人，长期超多头（未独立验证）；目标激进，注意加密高波动。",
           "credibility": "中",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "viewDate": "2026-07-29",
           "source": "Real Vision / Bitget Insights",
           "sourceUrl": "https://www.bitget.ng/pt/insights/posts/379633",
@@ -563,7 +563,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "CrossBorder Capital创始人，'流动性之王'（未独立验证）；框架偏长周期。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "viewDate": "2026-07-25",
           "source": "What Bitcoin Did / 火星财经",
           "sourceUrl": "https://m.marsbit.co/newsdetail/20260725133507801650.html",
@@ -591,7 +591,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "观点基于其节目发言，未独立验证",
           "credibility": "中",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "viewDate": "2026-07-22",
           "source": "Prof G Markets / Rosetta（2026-07）",
           "sourceUrl": "https://scripod.com/episode/925bnxauchpwfgg4s94kv5df/summary",
@@ -610,18 +610,18 @@ window.DASHBOARD_DATA = {
           "emoji": "🪨",
           "stance": "结构性",
           "theme": "国产算力新范式 · 系统级创新 · 自主可控",
-          "summary": "许愿石7月19日刊发《中国AI算力的新范式、护城河与全球棋局（上篇）》，提出国产算力正从\"堆卡\"走向\"系统级创新\"：以Chiplet先进封装+十万卡级集群调度为核心，用更低成本实现可用算力；Kimi V30登顶海外榜单验证国产模型能力，国产\"算力-模型-应用\"生态闭环成形。他判断算力竞争进入\"新范式\"，真正的护城河在系统整合与供应链自主，而非单点芯片性能。",
+          "summary": "许愿石8月5日续发\"市场温度计\"：短期温度28、中长期33，定调\"进攻\"；指出8月4日光模块(CPO)指数、费城半导体指数领涨，AI应用端Palantir盘前一度暴涨超16%（二季报超预期、上调全年营收指引），云计算端Anthropic与挪威数据中心达成100亿美元算力协议，存储端TrendForce称DRAM供不应求延续至2027、HBM4e配置尚未定案。延续其7月\"牛市温度计\"框架：监管降温+海外算力叙事裂痕+居民存款搬家三重信号下，判断牛市尚有\"后半场\"，资金从拥挤硬科技有序分流至消费/创新药/商业航天/人形机器人，科技缩圈而非溃散。",
           "highlights": [
-            "7/19：国产算力从\"堆卡\"转向Chiplet封装+十万卡集群的\"系统级创新\"",
-            "Kimi V30登顶海外榜单，国产模型-算力-应用生态闭环成形",
-            "真正护城河在系统整合与供应链自主，而非单一芯片性能"
+            "8/5：市场温度计短期28/中长期33，定调\"进攻\"；8/4光模块(CPO)、费城半导体领涨",
+            "AI应用Palantir盘前一度+16%（二季报超预期、上调指引）；Anthropic签100亿美元算力协议；DRAM供不应求延续至2027",
+            "延续7月框架：监管降温+海外算力裂痕+居民存款搬家，判断牛市有后半场、科技缩圈非溃散"
           ],
-          "returnNote": "雪球人气实战派，以坦诚记录组合与心态著称；偏谨慎，适合作为「过热警示」对照。",
+          "returnNote": "许愿石为雪球个人投资者，温度计为情绪指标非买卖依据（标\"未独立验证\"）；框架偏乐观、需防科技二次探底。",
           "credibility": "中",
-          "date": "2026-08-03",
-          "viewDate": "2026-07-19",
-          "source": "雪球（2026-07-19）",
-          "sourceUrl": "https://xueqiu.com/3001257315/400980514",
+          "date": "2026-08-08",
+          "viewDate": "2026-08-05",
+          "source": "雪球 / 许愿石（2026-08-05）",
+          "sourceUrl": "https://xueqiu.com/3953199771/403777521",
           "directions": [
             "AI算力基础设施",
             "红利 / 低估值 / 防御板块"
@@ -646,7 +646,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "头条财经人气创作者，观点综合机构策略、接地气；偏中性实务派。",
           "credibility": "中",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "viewDate": "2026-07-04",
           "source": "今日头条",
           "sourceUrl": "https://www.toutiao.com/article/7658631236188897832",
@@ -675,7 +675,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "头条财经KOL，观点偏题材挖掘（未独立验证）；注意粉丝导向与个股吹票风险。",
           "credibility": "低",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "viewDate": "2026-07-22",
           "source": "今日头条 / 金喜连连",
           "sourceUrl": "https://www.toutiao.com/article/7665278257122279986/",
@@ -704,7 +704,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "报告为东方财富证券研究所公开研报（SAC编号S1160525040001，未独立验证数据）；机构观点，非个股建议。注意其多头框架与回撤风险。",
           "credibility": "高",
-          "date": "2026-08-03",
+          "date": "2026-08-08",
           "viewDate": "2026-08-03",
           "source": "新浪财经 / 腾讯网 / 同花顺（2026-08-03）",
           "sourceUrl": "https://finance.sina.com.cn/roll/2026-08-03/doc-inikyxur6240613.shtml",
@@ -735,17 +735,17 @@ window.DASHBOARD_DATA = {
           "emoji": "👩‍🦳",
           "stance": "结构性",
           "theme": "AI算力 · 光通信 · 瓶颈标的",
-          "summary": "白毛女神8月初在OKX AMA回应“AI硬件见底了吗”：对光互联（SIVE/AAOI等）与CPO仍保持信心，认为硅光是确定性更高的环节；提到谷歌资本开支已上调至约1950-2050亿美元区间，印证AI硬件长期需求未被证伪。她提示硬件链进入分化期，需精选真正有瓶颈的标的而非普涨——7月其公开组合曾出现近五成回撤，但8月初仍坚持科技主线、用闲钱分批。",
+          "summary": "白毛女神8月8日最新发帖\"AI存储股5折大促销\"：美光/闪迪/SK海力士/三星/西数年内回撤35%-53%，但她强调\"买的是AI铲子、结果买到周期股\"，AI数据中心并未停（云厂商仍在砸钱、HBM仍缺、SSD仍在涨价、英伟达故事没结束）。她不去赌存储反弹，而是继续找AI基建里\"最容易卡住的位置\"：CPO/硅光子（LITE、SIVE、AAOI、Lumentum付4350万美元定金锁产能）、电力（Bloom Energy Q2收入同比+166%）。复盘7月组合单月回撤49.4%源于约1.4倍杠杆+重押存储/光子学平均跌35%，称\"最烦跌了就喊赶紧卖的人\"，只要营收加速+超大规模CAPEX同步、方向没变就无需恐慌。",
           "highlights": [
-            "8月初 OKX AMA：AI硬件未完，光互联(SIVE/AAOI)与CPO确定性更高，GOOGL capex上修至1950-2050亿",
-            "硬件链进入分化期：从普涨切到精选真瓶颈，警惕估值透支",
-            "组合曾现近五成回撤(7/18)，仍坚持科技主线、闲钱分批"
+            "8/8：发帖\"AI存储股5折大促销\"，美光/闪迪/海力士/三星回撤35%-53%，但称数据中心未停、HBM仍缺、英伟达故事未结束",
+            "继续找\"卡脖子\"位置：CPO/硅光子(LITE/SIVE/AAOI)+电力(Bloom Energy收入+166%)，不赌存储单纯反弹",
+            "复盘7月组合回撤49.4%源于1.4倍杠杆+存储/光子学重仓，重申方向没变、营收加速与CAPEX同步即不恐慌"
           ],
-          "returnNote": "自称年内45倍/总225倍（未独立验证）；2026-07公开组合回撤约49%，但喊单再掀涨停。注意吹票争议与幸存者偏差。",
+          "returnNote": "自称年内45倍/总225倍（未独立验证，标\"未独立验证\"）；7月公开组合回撤约49.4%（约1.4倍杠杆+存储/光子学重仓），吹票争议与幸存者偏差仍需注意。",
           "credibility": "中",
-          "date": "2026-08-07",
-          "source": "OKX AMA / TradingView / trueplookpanya（2026-08）",
-          "sourceUrl": "https://xueqiu.com/6600079272/402763052",
+          "date": "2026-08-08",
+          "source": "Odaily星球日报 / OKX Orbit（2026-08-08，整理自X）",
+          "sourceUrl": "https://www.okx.com/ru/orbit/post/83301959148576",
           "directions": [
             "AI光通信",
             "CPO",
@@ -753,7 +753,7 @@ window.DASHBOARD_DATA = {
             "内存"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-05"
+          "viewDate": "2026-08-08"
         },
         {
           "id": "danbin",
@@ -773,7 +773,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "旗下产品2026H1业绩曾领跑（未独立验证）；7月科技回撤中产品明显回撤但仍满仓逆向。注意单一风格与高波动、「2倍做多海力士」等杠杆产品风险。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "但斌微博 / 网易财经（2026-08-05）",
           "sourceUrl": "https://www.163.com/dy/article/L380QK530556MG0M.html",
           "directions": [
@@ -804,7 +804,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "泡泡玛特持仓市值/比例来自港交所披露与媒体报道（未独立验证）；卖Put属进阶策略、有被行权人义务，普通投资者慎仿。注意单一标的集中度风险。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "雪球 / 今日头条（2026-08-06）",
           "sourceUrl": "https://www.toutiao.com/article/7669613571675914767",
           "directions": [
@@ -835,7 +835,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "ARK系列ETF历史波动大（未独立验证）；长期看多但择时争议大，注意高波动与集中持仓。",
           "credibility": "中",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "Ark Invest 交易披露 / Yahoo Finance（2026-08-03）",
           "sourceUrl": "https://finance.yahoo.com/markets/crypto/articles/cathie-wood-expects-volatile-bitcoin-184500107.html",
           "directions": [
@@ -866,7 +866,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "桥水后时代仍活跃（未独立验证）；黄金配置建议具参考性，但框架偏长周期。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "达利欧社交媒体 / 彭博（2026-08-05）",
           "sourceUrl": "https://www.163.com/dy/article/L38E8PM405198NMR.html",
           "directions": [
@@ -888,17 +888,17 @@ window.DASHBOARD_DATA = {
           "emoji": "📊",
           "stance": "结构性",
           "theme": "AI硬件链分化 · CPO · 存储",
-          "summary": "雪球8月4日共识聚焦“英伟达CPO正式量产引爆光互联”：英伟达资深副总裁Gilad Shainer于8/3宣布Spectrum-X CPO交换机开始向合作伙伴出货、共封装光学(CPO)步入量产，并点明未来最大商机在Scale-up(垂直扩充)，带宽需求是Scale-out(水平扩充)的十倍。8/4 A股CPO/光模块暴力反弹——创业板指涨4.83%，“易中天”(中际旭创/新易盛/天孚通信)均涨超10%、光库科技等多股涨停，TrendForce预估CPO/NPO市场2030年突破390亿美元。与此同时资金在AI产业链内部再平衡：美光/闪迪跌超4%、SK海力士跌3%，国产长鑫存储开始获惠普/华硕/宏碁采用。",
+          "summary": "雪球热门共识8月7日捕捉AI逻辑\"下半场\"切换：张晓飞(HTI)团队指出AI新旧动能转换——供给端GPU与存储垄断定价推高全行业CapEx（若净利率从65-80%回归40-50%，全行业CapEx仅约六成），应用端受益于token成本下降与能力性价比提升、加速渗透，云厂无论承接开源/闭源均受益、是当前产业链最清晰方向；摩根士丹利闭门会(8/3)称AI粗放炒作时代终结，核心胜负手从\"押赛道\"转向\"兑现能力\"，盯云厂积压订单、平台云与AI收入增速、硬件订单价格与客户结构、重资产CapEx比例与FCF拐点。雪球8/2投资观察笔记显示分歧：黑貔貅认为AI硬件第一波下跌近尾声（韩国去杠杆7/31结束），metalslime主张买CSP/云/有护城河应用而非死磕硬件。整体\"结构性\"调仓思路延续。",
           "highlights": [
-            "8/4：英伟达官宣CPO步入量产(Spectrum-X开始出货)，Scale-up带宽是Scale-out十倍，光互联叙事从“炒预期”转向“看放量”",
-            "8/4 A股CPO板块暴力反弹：创业板指+4.83%，“易中天”均涨超10%、光库科技等多股涨停；TrendForce估CPO/NPO 2030年破390亿美元",
-            "资金内部再平衡：美光/闪迪/存储重挫，资金暂离存储拥抱光互联；国产长鑫存储获惠普/华硕/宏碁采用"
+            "8/7：张晓飞(HTI)指AI新旧动能转换，云厂（无论开源/闭源）为当前产业链最清晰受益方向，模型层因降价+高投入保持谨慎",
+            "8/3：大摩闭门会称AI粗放炒作终结，胜负手从押赛道转向兑现能力（订单/收入/FCF拐点）",
+            "8/2：雪球笔记分歧——黑貔貅看AI硬件跌近尾声、metalslime主张买CSP/云/应用层而非死磕硬件"
           ],
-          "returnNote": "涨幅/股价数据来自每日经济新闻、新浪财经、腾讯行情(2026-08-04)，未独立验证；雪球共识为社区聚合，非单一权威来源。注意板块高波动与拥挤交易风险。",
+          "returnNote": "雪球为散户 consensus 聚合，观点有选择性呈现与滞后；具体收益数据多未独立审计（标\"未独立验证\"）。",
           "credibility": "中",
-          "date": "2026-08-07",
-          "source": "雪球 / 每日经济新闻 / 新浪财经（2026-08-04）",
-          "sourceUrl": "https://finance.sina.com.cn/wm/2026-08-04/doc-inimchzm4219447.shtml?finpagefr=p_101",
+          "date": "2026-08-08",
+          "source": "雪球热门 / 张晓飞策略世界（2026-08-07）",
+          "sourceUrl": "https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-08-07%2Fdoc-inimnvkp4798840.shtml",
           "directions": [
             "国产存储",
             "先进封装",
@@ -907,7 +907,7 @@ window.DASHBOARD_DATA = {
             "固态电池"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-04"
+          "viewDate": "2026-08-07"
         },
         {
           "id": "honghao",
@@ -927,7 +927,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "论坛与闭门会内容经媒体二次整理（未独立验证原话）；\"3个月\"为情景判断非承诺。注意其观点随市场快速调整。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "洪灏社交媒体 / 凤凰湾区财经论坛（2026-08-06）",
           "sourceUrl": "https://mffb.com.cn/a/544216.html",
           "directions": [
@@ -957,7 +957,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "以「底」系列口号闻名（未独立验证）；观点偏散户保护，注意滞后与阴谋论色彩。",
           "credibility": "中",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "金融界 / 腾讯证券（2026-08-05）",
           "sourceUrl": "https://stock.jrj.com.cn/2026/08/01160357984996.shtml",
           "directions": [
@@ -987,7 +987,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "橡树资本创始人，备忘录广受推崇（未独立验证）；观点偏防御与周期。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "Oaktree Memos / 华尔街见闻（2026-08-04）",
           "sourceUrl": "https://wallstreetcn.com/articles/3770564",
           "directions": [
@@ -1017,7 +1017,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "观点来自私享会纪要（未独立验证原文）；\"缩圈/自由现金流\"为其中期框架，曾在2024-25准确提示风险。注意其偏防守立场。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "付鹏说 / TechFlow（2026-08-05）",
           "sourceUrl": "https://www.techflowpost.com/article/32941",
           "directions": [
@@ -1047,7 +1047,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "半夏投资创始人（未独立验证）；观点鲜明但曾踏空，注意其宏观多空框架。",
           "credibility": "中",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "半夏月报 / 搜狐（2026-08-06）",
           "sourceUrl": "https://www.sohu.com/a/1042365570_122014422",
           "directions": [
@@ -1076,7 +1076,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "私募大佬，长期重仓消费（未独立验证）；观点极端集中，注意单一风格。",
           "credibility": "中",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "腾讯新闻 / 雪球（2026-08-02）",
           "sourceUrl": "https://new.qq.com/rain/a/20260718A02L2V00?refer=cp_1009",
           "directions": [
@@ -1106,7 +1106,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "宁泉产品2026上半年业绩不佳、6月回撤创纪录；但历史上多次精准预警顶部，观点以风控价值见长。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "新浪 / 格隆汇 / 金融界",
           "sourceUrl": "https://cj.sina.com.cn/articles/view/5278967580/13aa6a71c00101jse8",
           "directions": [
@@ -1136,7 +1136,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "伯克希尔现金与持仓为公开披露（相对可验证）；建仓谷歌为新增信号。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "CNBC专访/新浪财经梳理（2026-07-15）",
           "sourceUrl": "https://cj.sina.com.cn/articles/view/7879923015/1d5ae154701901fhw2",
           "directions": [
@@ -1166,7 +1166,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "Duquesne创始人，宏观交易传奇（未独立验证）；观点偏战术调仓。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "source": "雪球 / SEC 13F / InvestorLens",
           "sourceUrl": "https://xueqiu.com/6505551108/398487202",
           "directions": [
@@ -1188,17 +1188,17 @@ window.DASHBOARD_DATA = {
           "emoji": "🐻",
           "stance": "偏空",
           "theme": "美股史上最贵 · AI泡沫 · 均值回归",
-          "summary": "87岁的GMO创始人格兰瑟姆8月1日连上财经节目，重申\"美股是美国历史上最贵的市场\"：巴菲特指标达235%（远超2000年153%峰值）、席勒PE约40倍（仅2000年见过）；直言\"AI是有史以来最大的投资泡沫\"，涨势最猛个股或从高点到低点跌70%（2000年纳指从顶到底跌78%）。他建议配置60%非美股（新兴市场/欧洲/日本）、5-10%贵金属、其余债券现金，明确标普500\"不值得配置\"。其GMO 13F却仍重仓微软/谷歌/苹果等巨头，引发\"言行不一\"讨论。",
+          "summary": "格兰瑟姆(87岁)8月初通过雪球长文与市场访谈第三次拉响警报，称美股\"史上最大投资泡沫\"、由AI驱动、下跌70%不意外，明确\"不要持有美国股票\"。他指出泡沫恰恰长在AI这样\"人类最伟大想法\"上（类比铁路改变世界却让铁路股破产），参照系为1989年日本(65倍PE跌二十年)与本次美股约35-40倍、高飞AI股从此位置跌70%毫不稀奇（纳指2000年跌82%）。更尖锐的是他揭示\"行规\"：从1929年起高盛们从未对客户说离开市场，400个全职专家中99%认为必有大熊市、但其所在公司无一家公开说——\"这是一种巨大的信任背叛\"。呼吁在别人连电话都不愿接的恐慌时刻才该出手。",
           "highlights": [
-            "8/1：美股\"史上最贵\"——巴菲特指标235%、席勒PE约40倍；AI\"史上最大泡沫\"，最猛个股或跌70%",
-            "配置建议：60%非美股、5-10%贵金属、其余债券现金，标普500\"不值得配置\"",
-            "GMO 13F仍重仓微软/谷歌/苹果等巨头，\"唱空却持有\"引争议"
+            "8月初：第三次警报称美股\"史上最大泡沫\"、AI驱动、跌70%不意外，直言\"不要持有美国股票\"",
+            "泡沫长在伟大想法上：类比铁路改变世界却让铁路股破产；参照1989日本与本次美股35-40倍PE",
+            "揭示\"行规\"：投行99%专家看跌却无一家公开说，是\"对客户的巨大信任背叛\""
           ],
-          "returnNote": "估值数据来自其访谈与GMO研究（未独立验证）；格兰瑟姆以精准预测泡沫著称但曾多次\"过早看空\"而踏空。注意均值回归时点极不确定。",
+          "returnNote": "格兰瑟姆历史预警纪录佳（2000/2008），但\"喊早了\"常被客户用脚投票；极端估值≠立刻崩，属\"未独立验证\"的长期风险框架。",
           "credibility": "中",
-          "date": "2026-08-07",
-          "source": "今日头条 / 网易（2026-08-01）",
-          "sourceUrl": "https://www.toutiao.com/article/7668720301923992070/",
+          "date": "2026-08-08",
+          "source": "雪球 / 网易游戏（2026-08-07）",
+          "sourceUrl": "https://xueqiu.com/7124507705/403235554",
           "directions": [
             "非美宽基",
             "黄金/白银",
@@ -1206,7 +1206,7 @@ window.DASHBOARD_DATA = {
             "撤离高估值科技"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-01"
+          "viewDate": "2026-08-07"
         },
         {
           "id": "lynalden",
@@ -1218,18 +1218,18 @@ window.DASHBOARD_DATA = {
           "emoji": "🌐",
           "stance": "结构性",
           "theme": "财政主导 · 流动性 · 真实资产",
-          "summary": "提出美国进入“财政主导”时代：结构性赤字而非央行政策驱动通胀与名义GDP。2026年7月9日Coin Stories播客指出，BTC当前处于情绪最弱区间、“没有援军”，而AI资本开支正抽干市场流动性；重申“39万亿美元债务地震”下BTC长期看15万美元（财政主导逻辑）。核心持有高质量股票（避开泡沫区）、黄金作永久战略持仓、BTC处低情绪区。整体建议从狂热领域再平衡到持仓率低的领域。",
+          "summary": "Lyn Alden 8月7日就比特币发声：称当前周期比特币投资者信心处于\"最低水平\"，不预期任何外部催化剂（如降息、ETF资金）来\"救\"比特币，强调其长期价值应依赖自身结构性特征（流动性、无许可、价值存储与转移功能）而非外部救世主。她判断四年减半周期正在失效（机构/ETF改变供需、山寨季消失、减半不再是催化剂），年内基准情景\"持平到上涨\"、不预期很快创历史新高，但\"不创新低\"即积极修复信号；长期仍看涨，视比特币为对冲财政赤字/债务螺旋/渐进印钞的最佳资产之一、与黄金互补，建议配置5-10%以上。其\"Orange Juice\"比特币国库项目已募资4000万美元。",
           "highlights": [
-            "财政主导：债务超GDP100%后利率工具失效，加息反而扩大赤字",
-            "7/9 Coin Stories：BTC情绪最弱、“无援军”，AI资本开支抽干流动性；“39万亿债务地震”下BTC长期看15万美元",
-            "核心持有高质量股票+黄金(战略仓)+比特币(低情绪区)，从狂热领域再平衡"
+            "8/7：称比特币当前周期投资者信心最低，不预期外部救世主，价值应靠自身结构性特征（流动性/无许可/价值存储）",
+            "四年减半周期失效论：机构ETF改变供需、山寨季消失、减半不再是催化剂，年内基准\"持平到上涨\"",
+            "长期仍看涨，视BTC为对冲债务/印钞资产、与黄金互补，建议配置5-10%以上；Orange Juice项目募资4000万美元"
           ],
-          "returnNote": "2020年起的宏观与比特币框架被市场广泛验证；以研究严谨著称，无公开实盘收益率可查。",
+          "returnNote": "Alden宏观/BTC研究影响广泛，但BTC价格判断属前瞻性、波动极大（标\"未独立验证\"）；其对M2与BTC近期背离的解释值得关注。",
           "credibility": "高",
-          "date": "2026-08-07",
-          "viewDate": "2026-07-09",
-          "source": "David Lin Report / Kitco / Biggo",
-          "sourceUrl": "https://atmes.ai/videos/did-another-great-depression-just-get-triggered-lyn-alden",
+          "date": "2026-08-08",
+          "viewDate": "2026-08-07",
+          "source": "Brave New Coin / 头条（2026-08-07）",
+          "sourceUrl": "https://bravenewcoin.com/zh-CN/insights/no-cavalry-for-bitcoin",
           "directions": [
             "黄金 / 避险资产",
             "高质量现金流",
@@ -1255,7 +1255,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "Real Vision创始人，长期超多头（未独立验证）；目标激进，注意加密高波动。",
           "credibility": "中",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "viewDate": "2026-08-05",
           "source": "Raoul Pal X / Real Vision（2026-08-05）",
           "sourceUrl": "https://www.tradingview.com/news/benzinga:380ccce7f094b:0-raoul-pal-says-most-people-think-crypto-is-about-tokens-going-up-and-down-but-today-it-is-about-owning-the-operating-system-of-the-next-economy",
@@ -1283,7 +1283,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "CrossBorder Capital创始人，'流动性之王'（未独立验证）；框架偏长周期。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "viewDate": "2026-07-25",
           "source": "What Bitcoin Did / 火星财经",
           "sourceUrl": "https://m.marsbit.co/newsdetail/20260725133507801650.html",
@@ -1311,7 +1311,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "观点基于其节目发言，未独立验证",
           "credibility": "中",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "viewDate": "2026-07-22",
           "source": "Prof G Markets / Rosetta（2026-07）",
           "sourceUrl": "https://scripod.com/episode/925bnxauchpwfgg4s94kv5df/summary",
@@ -1330,18 +1330,18 @@ window.DASHBOARD_DATA = {
           "emoji": "🪨",
           "stance": "结构性",
           "theme": "国产算力新范式 · 系统级创新 · 自主可控",
-          "summary": "许愿石7月24日发布《关于牛市市场温度的持续监控报告》：综合居民存款搬家、政策底、情绪与全球科技叙事“东西断裂”多维信号，判断市场处于“牛市下半场·中期调整”，政策底初步确认、市场底正在构筑。其监测显示：4-5月居民存款合计减少约2.05万亿、非银存款增3.61万亿，存款搬家进程约半程；跨界信号(保健品/果汁公司进军算力)触发泡沫中后期指纹但风险已部分释放；风险等级定为“橙色预警”(踏空风险>系统性风险)。",
+          "summary": "许愿石8月5日续发\"市场温度计\"：短期温度28、中长期33，定调\"进攻\"；指出8月4日光模块(CPO)指数、费城半导体指数领涨，AI应用端Palantir盘前一度暴涨超16%（二季报超预期、上调全年营收指引），云计算端Anthropic与挪威数据中心达成100亿美元算力协议，存储端TrendForce称DRAM供不应求延续至2027、HBM4e配置尚未定案。延续其7月\"牛市温度计\"框架：监管降温+海外算力叙事裂痕+居民存款搬家三重信号下，判断牛市尚有\"后半场\"，资金从拥挤硬科技有序分流至消费/创新药/商业航天/人形机器人，科技缩圈而非溃散。",
           "highlights": [
-            "7/24 牛市温度计：牛市下半场中期调整，政策底确认、市场底构筑中",
-            "居民存款4-5月减2.05万亿、非银增3.61万亿，搬家进程约半程",
-            "跨界信号触发泡沫中后期指纹但风险已部分释放；橙色预警(踏空>系统性)"
+            "8/5：市场温度计短期28/中长期33，定调\"进攻\"；8/4光模块(CPO)、费城半导体领涨",
+            "AI应用Palantir盘前一度+16%（二季报超预期、上调指引）；Anthropic签100亿美元算力协议；DRAM供不应求延续至2027",
+            "延续7月框架：监管降温+海外算力裂痕+居民存款搬家，判断牛市有后半场、科技缩圈非溃散"
           ],
-          "returnNote": "雪球人气实战派，以坦诚记录组合与心态著称；偏谨慎，适合作为「过热警示」对照。",
+          "returnNote": "许愿石为雪球个人投资者，温度计为情绪指标非买卖依据（标\"未独立验证\"）；框架偏乐观、需防科技二次探底。",
           "credibility": "中",
-          "date": "2026-08-07",
-          "viewDate": "2026-07-24",
-          "source": "许愿石雪球专栏 / 九元公社（2026-07-24）",
-          "sourceUrl": "https://www.jiuyangongshe.com/a/jum60p33dk",
+          "date": "2026-08-08",
+          "viewDate": "2026-08-05",
+          "source": "雪球 / 许愿石（2026-08-05）",
+          "sourceUrl": "https://xueqiu.com/3953199771/403777521",
           "directions": [
             "AI算力基础设施",
             "红利 / 低估值 / 防御板块"
@@ -1366,7 +1366,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "头条财经人气创作者，观点综合机构策略、接地气；偏中性实务派。",
           "credibility": "中",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "viewDate": "2026-08-04",
           "source": "今日头条 / 东方财富股吧（2026-08-04）",
           "sourceUrl": "https://guba.eastmoney.com/news,300136,1754189929.html",
@@ -1395,7 +1395,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "市场规模/Omdia数据来自腾讯新闻、《中国电子报》(2026-08-04/08-06)，未独立验证；金喜连连观点为个人解读，注意先进封装产业化节奏与良率风险。",
           "credibility": "低",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "viewDate": "2026-08-04",
           "source": "腾讯新闻 / 中国电子报（2026-08-04、2026-08-06）",
           "sourceUrl": "https://new.qq.com/rain/a/20260804A0CVOW00?refer=cp_1009",
@@ -1424,7 +1424,7 @@ window.DASHBOARD_DATA = {
           ],
           "returnNote": "报告为东方财富证券研究所公开研报（SAC编号S1160525040001，未独立验证数据）；机构观点，非个股建议。注意其多头框架与回撤风险。",
           "credibility": "高",
-          "date": "2026-08-07",
+          "date": "2026-08-08",
           "viewDate": "2026-08-03",
           "source": "新浪财经 / 腾讯网 / 同花顺（2026-08-03）",
           "sourceUrl": "https://finance.sina.com.cn/roll/2026-08-03/doc-inikyxur6240613.shtml",
@@ -1455,17 +1455,17 @@ window.DASHBOARD_DATA = {
           "emoji": "👩‍🦳",
           "stance": "结构性",
           "theme": "AI算力 · 光通信 · 瓶颈标的",
-          "summary": "白毛女神8月上旬连发两文：一是认同富国银行观点，称Meta出售多余算力是AI底层需求与单位经济(Unit Economics)依旧强劲的积极信号、而非削减资本开支，Neocloud反而验证AI基建大机会；二是在粉丝问答中判断本轮AI硬件为\"短期极端去杠杆、多数个股跌过头\"，以Bloom Energy营收+166%、Teradyne+104%、谷歌capex上修至1950-2050亿美元佐证\"加速逻辑未变、正兑现为真实业绩\"。她重申聚焦瓶颈环节——光互连/CPO/硅光子($LITE、$SIVE、$AAOI)，组合7月回撤近49%后已主动降杠杆，但信念与方向未变。",
+          "summary": "白毛女神8月8日最新发帖\"AI存储股5折大促销\"：美光/闪迪/SK海力士/三星/西数年内回撤35%-53%，但她强调\"买的是AI铲子、结果买到周期股\"，AI数据中心并未停（云厂商仍在砸钱、HBM仍缺、SSD仍在涨价、英伟达故事没结束）。她不去赌存储反弹，而是继续找AI基建里\"最容易卡住的位置\"：CPO/硅光子（LITE、SIVE、AAOI、Lumentum付4350万美元定金锁产能）、电力（Bloom Energy Q2收入同比+166%）。复盘7月组合单月回撤49.4%源于约1.4倍杠杆+重押存储/光子学平均跌35%，称\"最烦跌了就喊赶紧卖的人\"，只要营收加速+超大规模CAPEX同步、方向没变就无需恐慌。",
           "highlights": [
-            "8月上旬：认同富国银行，Meta卖多余算力=AI需求强劲信号而非capex削减；Neocloud验证基建大机会",
-            "AI硬件\"短期极端去杠杆、跌过头\"：Bloom Energy+166%、Teradyne+104%、GOOGL capex上修至1950-2050亿，加速逻辑未变",
-            "聚焦瓶颈环节光互连/CPO/硅光子($LITE/$SIVE/$AAOI)；组合7月回撤近49%后降杠杆，信念方向不变"
+            "8/8：发帖\"AI存储股5折大促销\"，美光/闪迪/海力士/三星回撤35%-53%，但称数据中心未停、HBM仍缺、英伟达故事未结束",
+            "继续找\"卡脖子\"位置：CPO/硅光子(LITE/SIVE/AAOI)+电力(Bloom Energy收入+166%)，不赌存储单纯反弹",
+            "复盘7月组合回撤49.4%源于1.4倍杠杆+存储/光子学重仓，重申方向没变、营收加速与CAPEX同步即不恐慌"
           ],
-          "returnNote": "自称组合7月回撤约49.4%（公开披露，未独立验证）；已主动降杠杆控风险。吹票争议与幸存者偏差仍在，注意高波动与集中度风险。",
+          "returnNote": "自称年内45倍/总225倍（未独立验证，标\"未独立验证\"）；7月公开组合回撤约49.4%（约1.4倍杠杆+存储/光子学重仓），吹票争议与幸存者偏差仍需注意。",
           "credibility": "中",
           "date": "2026-08-08",
-          "source": "Odaily星球日报 / OKX Orbit（2026-08-07，整理自X）",
-          "sourceUrl": "https://www.oyuzh.systems/zh-hans-au/orbit/news/serenity-meta-ai-80803144881440",
+          "source": "Odaily星球日报 / OKX Orbit（2026-08-08，整理自X）",
+          "sourceUrl": "https://www.okx.com/ru/orbit/post/83301959148576",
           "directions": [
             "AI光通信",
             "CPO",
@@ -1473,7 +1473,7 @@ window.DASHBOARD_DATA = {
             "内存"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-07"
+          "viewDate": "2026-08-08"
         },
         {
           "id": "danbin",
@@ -1608,17 +1608,17 @@ window.DASHBOARD_DATA = {
           "emoji": "📊",
           "stance": "结构性",
           "theme": "AI硬件链分化 · CPO · 存储",
-          "summary": "雪球8月6日前后热议“磷化铟(InP)供给缺口”：Lumentum CEO 公开警示 InP 供需缺口已超过 DRAM/NAND 等存储芯片，正成为制约 AI 数据中心光互联扩展的核心瓶颈；英伟达预测 2026—2030 年 InP 晶圆需求将激增约 20 倍，Lumentum 测算 AI 数据中心 InP 需求 CAGR 达 85%。讨论指向光模块/CPO 上游材料端(衬底-外延-光芯片)成为比 GPU 更“卡脖子”的环节，供给寡头垄断(住友/AXT/JX 三家占高端产能90%)+中国铟出口管制令缺口短期难解。",
+          "summary": "雪球热门共识8月7日捕捉AI逻辑\"下半场\"切换：张晓飞(HTI)团队指出AI新旧动能转换——供给端GPU与存储垄断定价推高全行业CapEx（若净利率从65-80%回归40-50%，全行业CapEx仅约六成），应用端受益于token成本下降与能力性价比提升、加速渗透，云厂无论承接开源/闭源均受益、是当前产业链最清晰方向；摩根士丹利闭门会(8/3)称AI粗放炒作时代终结，核心胜负手从\"押赛道\"转向\"兑现能力\"，盯云厂积压订单、平台云与AI收入增速、硬件订单价格与客户结构、重资产CapEx比例与FCF拐点。雪球8/2投资观察笔记显示分歧：黑貔貅认为AI硬件第一波下跌近尾声（韩国去杠杆7/31结束），metalslime主张买CSP/云/有护城河应用而非死磕硬件。整体\"结构性\"调仓思路延续。",
           "highlights": [
-            "8/6：Lumentum CEO 称 InP 缺口超 DRAM/NAND，成 AI 光互联核心瓶颈；英伟达预计2026-30晶圆需求+20倍",
-            "供给端寡头垄断(住友42%/AXT 35%/JX 13%占高端90%)+中国铟出口管制，缺口70%+、延续至2027后",
-            "投资主线从GPU转向“光之地基”：InP衬底/外延/光芯片国产替代与价值重估，材料确定性>纯题材"
+            "8/7：张晓飞(HTI)指AI新旧动能转换，云厂（无论开源/闭源）为当前产业链最清晰受益方向，模型层因降价+高投入保持谨慎",
+            "8/3：大摩闭门会称AI粗放炒作终结，胜负手从押赛道转向兑现能力（订单/收入/FCF拐点）",
+            "8/2：雪球笔记分歧——黑貔貅看AI硬件跌近尾声、metalslime主张买CSP/云/应用层而非死磕硬件"
           ],
-          "returnNote": "雪球共识为社区聚合非单一权威；InP 缺口数据来自 Lumentum/高盛/Yole 等研报转述(未独立验证)。注意板块高波动与拥挤交易风险。",
+          "returnNote": "雪球为散户 consensus 聚合，观点有选择性呈现与滞后；具体收益数据多未独立审计（标\"未独立验证\"）。",
           "credibility": "中",
           "date": "2026-08-08",
-          "source": "雪球热门（2026-08-06）",
-          "sourceUrl": "https://xueqiu.com/1445657263/403592931",
+          "source": "雪球热门 / 张晓飞策略世界（2026-08-07）",
+          "sourceUrl": "https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-08-07%2Fdoc-inimnvkp4798840.shtml",
           "directions": [
             "国产存储",
             "先进封装",
@@ -1627,7 +1627,7 @@ window.DASHBOARD_DATA = {
             "固态电池"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-06"
+          "viewDate": "2026-08-07"
         },
         {
           "id": "honghao",
@@ -1908,17 +1908,17 @@ window.DASHBOARD_DATA = {
           "emoji": "🐻",
           "stance": "偏空",
           "theme": "美股史上最贵 · AI泡沫 · 均值回归",
-          "summary": "87岁的GMO创始人格兰瑟姆8月1日连上财经节目，重申\"美股是美国历史上最贵的市场\"：巴菲特指标达235%（远超2000年153%峰值）、席勒PE约40倍（仅2000年见过）；直言\"AI是有史以来最大的投资泡沫\"，涨势最猛个股或从高点到低点跌70%（2000年纳指从顶到底跌78%）。他建议配置60%非美股（新兴市场/欧洲/日本）、5-10%贵金属、其余债券现金，明确标普500\"不值得配置\"。其GMO 13F却仍重仓微软/谷歌/苹果等巨头，引发\"言行不一\"讨论。",
+          "summary": "格兰瑟姆(87岁)8月初通过雪球长文与市场访谈第三次拉响警报，称美股\"史上最大投资泡沫\"、由AI驱动、下跌70%不意外，明确\"不要持有美国股票\"。他指出泡沫恰恰长在AI这样\"人类最伟大想法\"上（类比铁路改变世界却让铁路股破产），参照系为1989年日本(65倍PE跌二十年)与本次美股约35-40倍、高飞AI股从此位置跌70%毫不稀奇（纳指2000年跌82%）。更尖锐的是他揭示\"行规\"：从1929年起高盛们从未对客户说离开市场，400个全职专家中99%认为必有大熊市、但其所在公司无一家公开说——\"这是一种巨大的信任背叛\"。呼吁在别人连电话都不愿接的恐慌时刻才该出手。",
           "highlights": [
-            "8/1：美股\"史上最贵\"——巴菲特指标235%、席勒PE约40倍；AI\"史上最大泡沫\"，最猛个股或跌70%",
-            "配置建议：60%非美股、5-10%贵金属、其余债券现金，标普500\"不值得配置\"",
-            "GMO 13F仍重仓微软/谷歌/苹果等巨头，\"唱空却持有\"引争议"
+            "8月初：第三次警报称美股\"史上最大泡沫\"、AI驱动、跌70%不意外，直言\"不要持有美国股票\"",
+            "泡沫长在伟大想法上：类比铁路改变世界却让铁路股破产；参照1989日本与本次美股35-40倍PE",
+            "揭示\"行规\"：投行99%专家看跌却无一家公开说，是\"对客户的巨大信任背叛\""
           ],
-          "returnNote": "估值数据来自其访谈与GMO研究（未独立验证）；格兰瑟姆以精准预测泡沫著称但曾多次\"过早看空\"而踏空。注意均值回归时点极不确定。",
+          "returnNote": "格兰瑟姆历史预警纪录佳（2000/2008），但\"喊早了\"常被客户用脚投票；极端估值≠立刻崩，属\"未独立验证\"的长期风险框架。",
           "credibility": "中",
           "date": "2026-08-08",
-          "source": "今日头条 / 网易（2026-08-01）",
-          "sourceUrl": "https://www.toutiao.com/article/7668720301923992070/",
+          "source": "雪球 / 网易游戏（2026-08-07）",
+          "sourceUrl": "https://xueqiu.com/7124507705/403235554",
           "directions": [
             "非美宽基",
             "黄金/白银",
@@ -1926,7 +1926,7 @@ window.DASHBOARD_DATA = {
             "撤离高估值科技"
           ],
           "fetchable": true,
-          "viewDate": "2026-08-01"
+          "viewDate": "2026-08-07"
         },
         {
           "id": "lynalden",
@@ -1938,18 +1938,18 @@ window.DASHBOARD_DATA = {
           "emoji": "🌐",
           "stance": "结构性",
           "theme": "财政主导 · 流动性 · 真实资产",
-          "summary": "Lyn Alden 将其“财政主导”与“货币贬值”宏观理论落地为实盘：联合创办的永久资本控股公司 Orange Juice Holdings 于7月16日完成 4,000万美元种子轮融资，拟收购年收入100万-1000万美元、现金流为正的美国小企业，用AI辅助运营、将留存收益作为比特币储备，目标未来上市(类“主街版MicroStrategy”)。墨西哥亿万富豪 Ricardo Salinas 领投，共同创始人含《The Price of Tomorrow》作者 Jeff Booth。此举标志其从“commentary”转向“execution”，用真实经营现金流+比特币储备对抗法币贬值。",
+          "summary": "Lyn Alden 8月7日就比特币发声：称当前周期比特币投资者信心处于\"最低水平\"，不预期任何外部催化剂（如降息、ETF资金）来\"救\"比特币，强调其长期价值应依赖自身结构性特征（流动性、无许可、价值存储与转移功能）而非外部救世主。她判断四年减半周期正在失效（机构/ETF改变供需、山寨季消失、减半不再是催化剂），年内基准情景\"持平到上涨\"、不预期很快创历史新高，但\"不创新低\"即积极修复信号；长期仍看涨，视比特币为对冲财政赤字/债务螺旋/渐进印钞的最佳资产之一、与黄金互补，建议配置5-10%以上。其\"Orange Juice\"比特币国库项目已募资4000万美元。",
           "highlights": [
-            "7/16：Orange Juice Holdings 完成4000万美元种子轮，收购现金流为正美国小企业、留存收益转比特币储备",
-            "联合创始人含 Jeff Booth，墨西哥富豪 Ricardo Salinas 领投，目标上市(主街版MicroStrategy)",
-            "从“财政主导”理论走向实盘：经营现金流+BTC储备对抗货币贬值，长期看多2026-27"
+            "8/7：称比特币当前周期投资者信心最低，不预期外部救世主，价值应靠自身结构性特征（流动性/无许可/价值存储）",
+            "四年减半周期失效论：机构ETF改变供需、山寨季消失、减半不再是催化剂，年内基准\"持平到上涨\"",
+            "长期仍看涨，视BTC为对冲债务/印钞资产、与黄金互补，建议配置5-10%以上；Orange Juice项目募资4000万美元"
           ],
-          "returnNote": "2020年起的宏观与比特币框架被广泛验证；Orange Juice 为新建实体、业绩待观察，注意早期风险。",
+          "returnNote": "Alden宏观/BTC研究影响广泛，但BTC价格判断属前瞻性、波动极大（标\"未独立验证\"）；其对M2与BTC近期背离的解释值得关注。",
           "credibility": "高",
           "date": "2026-08-08",
-          "viewDate": "2026-07-16",
-          "source": "CoinDesk / BingX（2026-07-16）",
-          "sourceUrl": "https://bingx.com/en/flash-news/post/lyn-alden-cofounds-orange-juice-holdings-closes-m-seed-round-for-bitcoin-treasury-strategy",
+          "viewDate": "2026-08-07",
+          "source": "Brave New Coin / 头条（2026-08-07）",
+          "sourceUrl": "https://bravenewcoin.com/zh-CN/insights/no-cavalry-for-bitcoin",
           "directions": [
             "黄金 / 避险资产",
             "高质量现金流",
@@ -2050,18 +2050,18 @@ window.DASHBOARD_DATA = {
           "emoji": "🪨",
           "stance": "结构性",
           "theme": "国产算力新范式 · 系统级创新 · 自主可控",
-          "summary": "许愿石7月24日发布《关于牛市市场温度的持续监控报告》：综合居民存款搬家、政策底、情绪与全球科技叙事“东西断裂”多维信号，判断市场处于“牛市下半场·中期调整”，政策底初步确认、市场底正在构筑。其监测显示：4-5月居民存款合计减少约2.05万亿、非银存款增3.61万亿，存款搬家进程约半程；跨界信号(保健品/果汁公司进军算力)触发泡沫中后期指纹但风险已部分释放；风险等级定为“橙色预警”(踏空风险>系统性风险)。",
+          "summary": "许愿石8月5日续发\"市场温度计\"：短期温度28、中长期33，定调\"进攻\"；指出8月4日光模块(CPO)指数、费城半导体指数领涨，AI应用端Palantir盘前一度暴涨超16%（二季报超预期、上调全年营收指引），云计算端Anthropic与挪威数据中心达成100亿美元算力协议，存储端TrendForce称DRAM供不应求延续至2027、HBM4e配置尚未定案。延续其7月\"牛市温度计\"框架：监管降温+海外算力叙事裂痕+居民存款搬家三重信号下，判断牛市尚有\"后半场\"，资金从拥挤硬科技有序分流至消费/创新药/商业航天/人形机器人，科技缩圈而非溃散。",
           "highlights": [
-            "7/24 牛市温度计：牛市下半场中期调整，政策底确认、市场底构筑中",
-            "居民存款4-5月减2.05万亿、非银增3.61万亿，搬家进程约半程",
-            "跨界信号触发泡沫中后期指纹但风险已部分释放；橙色预警(踏空>系统性)"
+            "8/5：市场温度计短期28/中长期33，定调\"进攻\"；8/4光模块(CPO)、费城半导体领涨",
+            "AI应用Palantir盘前一度+16%（二季报超预期、上调指引）；Anthropic签100亿美元算力协议；DRAM供不应求延续至2027",
+            "延续7月框架：监管降温+海外算力裂痕+居民存款搬家，判断牛市有后半场、科技缩圈非溃散"
           ],
-          "returnNote": "雪球人气实战派，以坦诚记录组合与心态著称；偏谨慎，适合作为「过热警示」对照。",
+          "returnNote": "许愿石为雪球个人投资者，温度计为情绪指标非买卖依据（标\"未独立验证\"）；框架偏乐观、需防科技二次探底。",
           "credibility": "中",
           "date": "2026-08-08",
-          "viewDate": "2026-07-24",
-          "source": "许愿石雪球专栏 / 九元公社（2026-07-24）",
-          "sourceUrl": "https://www.jiuyangongshe.com/a/jum60p33dk",
+          "viewDate": "2026-08-05",
+          "source": "雪球 / 许愿石（2026-08-05）",
+          "sourceUrl": "https://xueqiu.com/3953199771/403777521",
           "directions": [
             "AI算力基础设施",
             "红利 / 低估值 / 防御板块"
@@ -2174,17 +2174,17 @@ window.DASHBOARD_DATA = {
       "emoji": "👩‍🦳",
       "stance": "结构性",
       "theme": "AI算力 · 光通信 · 瓶颈标的",
-      "summary": "白毛女神8月上旬连发两文：一是认同富国银行观点，称Meta出售多余算力是AI底层需求与单位经济(Unit Economics)依旧强劲的积极信号、而非削减资本开支，Neocloud反而验证AI基建大机会；二是在粉丝问答中判断本轮AI硬件为\"短期极端去杠杆、多数个股跌过头\"，以Bloom Energy营收+166%、Teradyne+104%、谷歌capex上修至1950-2050亿美元佐证\"加速逻辑未变、正兑现为真实业绩\"。她重申聚焦瓶颈环节——光互连/CPO/硅光子($LITE、$SIVE、$AAOI)，组合7月回撤近49%后已主动降杠杆，但信念与方向未变。",
+      "summary": "白毛女神8月8日最新发帖\"AI存储股5折大促销\"：美光/闪迪/SK海力士/三星/西数年内回撤35%-53%，但她强调\"买的是AI铲子、结果买到周期股\"，AI数据中心并未停（云厂商仍在砸钱、HBM仍缺、SSD仍在涨价、英伟达故事没结束）。她不去赌存储反弹，而是继续找AI基建里\"最容易卡住的位置\"：CPO/硅光子（LITE、SIVE、AAOI、Lumentum付4350万美元定金锁产能）、电力（Bloom Energy Q2收入同比+166%）。复盘7月组合单月回撤49.4%源于约1.4倍杠杆+重押存储/光子学平均跌35%，称\"最烦跌了就喊赶紧卖的人\"，只要营收加速+超大规模CAPEX同步、方向没变就无需恐慌。",
       "highlights": [
-        "8月上旬：认同富国银行，Meta卖多余算力=AI需求强劲信号而非capex削减；Neocloud验证基建大机会",
-        "AI硬件\"短期极端去杠杆、跌过头\"：Bloom Energy+166%、Teradyne+104%、GOOGL capex上修至1950-2050亿，加速逻辑未变",
-        "聚焦瓶颈环节光互连/CPO/硅光子($LITE/$SIVE/$AAOI)；组合7月回撤近49%后降杠杆，信念方向不变"
+        "8/8：发帖\"AI存储股5折大促销\"，美光/闪迪/海力士/三星回撤35%-53%，但称数据中心未停、HBM仍缺、英伟达故事未结束",
+        "继续找\"卡脖子\"位置：CPO/硅光子(LITE/SIVE/AAOI)+电力(Bloom Energy收入+166%)，不赌存储单纯反弹",
+        "复盘7月组合回撤49.4%源于1.4倍杠杆+存储/光子学重仓，重申方向没变、营收加速与CAPEX同步即不恐慌"
       ],
-      "returnNote": "自称组合7月回撤约49.4%（公开披露，未独立验证）；已主动降杠杆控风险。吹票争议与幸存者偏差仍在，注意高波动与集中度风险。",
+      "returnNote": "自称年内45倍/总225倍（未独立验证，标\"未独立验证\"）；7月公开组合回撤约49.4%（约1.4倍杠杆+存储/光子学重仓），吹票争议与幸存者偏差仍需注意。",
       "credibility": "中",
       "date": "2026-08-08",
-      "source": "Odaily星球日报 / OKX Orbit（2026-08-07，整理自X）",
-      "sourceUrl": "https://www.oyuzh.systems/zh-hans-au/orbit/news/serenity-meta-ai-80803144881440",
+      "source": "Odaily星球日报 / OKX Orbit（2026-08-08，整理自X）",
+      "sourceUrl": "https://www.okx.com/ru/orbit/post/83301959148576",
       "directions": [
         "AI光通信",
         "CPO",
@@ -2192,7 +2192,7 @@ window.DASHBOARD_DATA = {
         "内存"
       ],
       "fetchable": true,
-      "viewDate": "2026-08-07"
+      "viewDate": "2026-08-08"
     },
     {
       "id": "danbin",
@@ -2327,17 +2327,17 @@ window.DASHBOARD_DATA = {
       "emoji": "📊",
       "stance": "结构性",
       "theme": "AI硬件链分化 · CPO · 存储",
-      "summary": "雪球8月6日前后热议“磷化铟(InP)供给缺口”：Lumentum CEO 公开警示 InP 供需缺口已超过 DRAM/NAND 等存储芯片，正成为制约 AI 数据中心光互联扩展的核心瓶颈；英伟达预测 2026—2030 年 InP 晶圆需求将激增约 20 倍，Lumentum 测算 AI 数据中心 InP 需求 CAGR 达 85%。讨论指向光模块/CPO 上游材料端(衬底-外延-光芯片)成为比 GPU 更“卡脖子”的环节，供给寡头垄断(住友/AXT/JX 三家占高端产能90%)+中国铟出口管制令缺口短期难解。",
+      "summary": "雪球热门共识8月7日捕捉AI逻辑\"下半场\"切换：张晓飞(HTI)团队指出AI新旧动能转换——供给端GPU与存储垄断定价推高全行业CapEx（若净利率从65-80%回归40-50%，全行业CapEx仅约六成），应用端受益于token成本下降与能力性价比提升、加速渗透，云厂无论承接开源/闭源均受益、是当前产业链最清晰方向；摩根士丹利闭门会(8/3)称AI粗放炒作时代终结，核心胜负手从\"押赛道\"转向\"兑现能力\"，盯云厂积压订单、平台云与AI收入增速、硬件订单价格与客户结构、重资产CapEx比例与FCF拐点。雪球8/2投资观察笔记显示分歧：黑貔貅认为AI硬件第一波下跌近尾声（韩国去杠杆7/31结束），metalslime主张买CSP/云/有护城河应用而非死磕硬件。整体\"结构性\"调仓思路延续。",
       "highlights": [
-        "8/6：Lumentum CEO 称 InP 缺口超 DRAM/NAND，成 AI 光互联核心瓶颈；英伟达预计2026-30晶圆需求+20倍",
-        "供给端寡头垄断(住友42%/AXT 35%/JX 13%占高端90%)+中国铟出口管制，缺口70%+、延续至2027后",
-        "投资主线从GPU转向“光之地基”：InP衬底/外延/光芯片国产替代与价值重估，材料确定性>纯题材"
+        "8/7：张晓飞(HTI)指AI新旧动能转换，云厂（无论开源/闭源）为当前产业链最清晰受益方向，模型层因降价+高投入保持谨慎",
+        "8/3：大摩闭门会称AI粗放炒作终结，胜负手从押赛道转向兑现能力（订单/收入/FCF拐点）",
+        "8/2：雪球笔记分歧——黑貔貅看AI硬件跌近尾声、metalslime主张买CSP/云/应用层而非死磕硬件"
       ],
-      "returnNote": "雪球共识为社区聚合非单一权威；InP 缺口数据来自 Lumentum/高盛/Yole 等研报转述(未独立验证)。注意板块高波动与拥挤交易风险。",
+      "returnNote": "雪球为散户 consensus 聚合，观点有选择性呈现与滞后；具体收益数据多未独立审计（标\"未独立验证\"）。",
       "credibility": "中",
       "date": "2026-08-08",
-      "source": "雪球热门（2026-08-06）",
-      "sourceUrl": "https://xueqiu.com/1445657263/403592931",
+      "source": "雪球热门 / 张晓飞策略世界（2026-08-07）",
+      "sourceUrl": "https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-08-07%2Fdoc-inimnvkp4798840.shtml",
       "directions": [
         "国产存储",
         "先进封装",
@@ -2346,7 +2346,7 @@ window.DASHBOARD_DATA = {
         "固态电池"
       ],
       "fetchable": true,
-      "viewDate": "2026-08-06"
+      "viewDate": "2026-08-07"
     },
     {
       "id": "honghao",
@@ -2627,17 +2627,17 @@ window.DASHBOARD_DATA = {
       "emoji": "🐻",
       "stance": "偏空",
       "theme": "美股史上最贵 · AI泡沫 · 均值回归",
-      "summary": "87岁的GMO创始人格兰瑟姆8月1日连上财经节目，重申\"美股是美国历史上最贵的市场\"：巴菲特指标达235%（远超2000年153%峰值）、席勒PE约40倍（仅2000年见过）；直言\"AI是有史以来最大的投资泡沫\"，涨势最猛个股或从高点到低点跌70%（2000年纳指从顶到底跌78%）。他建议配置60%非美股（新兴市场/欧洲/日本）、5-10%贵金属、其余债券现金，明确标普500\"不值得配置\"。其GMO 13F却仍重仓微软/谷歌/苹果等巨头，引发\"言行不一\"讨论。",
+      "summary": "格兰瑟姆(87岁)8月初通过雪球长文与市场访谈第三次拉响警报，称美股\"史上最大投资泡沫\"、由AI驱动、下跌70%不意外，明确\"不要持有美国股票\"。他指出泡沫恰恰长在AI这样\"人类最伟大想法\"上（类比铁路改变世界却让铁路股破产），参照系为1989年日本(65倍PE跌二十年)与本次美股约35-40倍、高飞AI股从此位置跌70%毫不稀奇（纳指2000年跌82%）。更尖锐的是他揭示\"行规\"：从1929年起高盛们从未对客户说离开市场，400个全职专家中99%认为必有大熊市、但其所在公司无一家公开说——\"这是一种巨大的信任背叛\"。呼吁在别人连电话都不愿接的恐慌时刻才该出手。",
       "highlights": [
-        "8/1：美股\"史上最贵\"——巴菲特指标235%、席勒PE约40倍；AI\"史上最大泡沫\"，最猛个股或跌70%",
-        "配置建议：60%非美股、5-10%贵金属、其余债券现金，标普500\"不值得配置\"",
-        "GMO 13F仍重仓微软/谷歌/苹果等巨头，\"唱空却持有\"引争议"
+        "8月初：第三次警报称美股\"史上最大泡沫\"、AI驱动、跌70%不意外，直言\"不要持有美国股票\"",
+        "泡沫长在伟大想法上：类比铁路改变世界却让铁路股破产；参照1989日本与本次美股35-40倍PE",
+        "揭示\"行规\"：投行99%专家看跌却无一家公开说，是\"对客户的巨大信任背叛\""
       ],
-      "returnNote": "估值数据来自其访谈与GMO研究（未独立验证）；格兰瑟姆以精准预测泡沫著称但曾多次\"过早看空\"而踏空。注意均值回归时点极不确定。",
+      "returnNote": "格兰瑟姆历史预警纪录佳（2000/2008），但\"喊早了\"常被客户用脚投票；极端估值≠立刻崩，属\"未独立验证\"的长期风险框架。",
       "credibility": "中",
       "date": "2026-08-08",
-      "source": "今日头条 / 网易（2026-08-01）",
-      "sourceUrl": "https://www.toutiao.com/article/7668720301923992070/",
+      "source": "雪球 / 网易游戏（2026-08-07）",
+      "sourceUrl": "https://xueqiu.com/7124507705/403235554",
       "directions": [
         "非美宽基",
         "黄金/白银",
@@ -2645,7 +2645,7 @@ window.DASHBOARD_DATA = {
         "撤离高估值科技"
       ],
       "fetchable": true,
-      "viewDate": "2026-08-01"
+      "viewDate": "2026-08-07"
     },
     {
       "id": "lynalden",
@@ -2657,18 +2657,18 @@ window.DASHBOARD_DATA = {
       "emoji": "🌐",
       "stance": "结构性",
       "theme": "财政主导 · 流动性 · 真实资产",
-      "summary": "Lyn Alden 将其“财政主导”与“货币贬值”宏观理论落地为实盘：联合创办的永久资本控股公司 Orange Juice Holdings 于7月16日完成 4,000万美元种子轮融资，拟收购年收入100万-1000万美元、现金流为正的美国小企业，用AI辅助运营、将留存收益作为比特币储备，目标未来上市(类“主街版MicroStrategy”)。墨西哥亿万富豪 Ricardo Salinas 领投，共同创始人含《The Price of Tomorrow》作者 Jeff Booth。此举标志其从“commentary”转向“execution”，用真实经营现金流+比特币储备对抗法币贬值。",
+      "summary": "Lyn Alden 8月7日就比特币发声：称当前周期比特币投资者信心处于\"最低水平\"，不预期任何外部催化剂（如降息、ETF资金）来\"救\"比特币，强调其长期价值应依赖自身结构性特征（流动性、无许可、价值存储与转移功能）而非外部救世主。她判断四年减半周期正在失效（机构/ETF改变供需、山寨季消失、减半不再是催化剂），年内基准情景\"持平到上涨\"、不预期很快创历史新高，但\"不创新低\"即积极修复信号；长期仍看涨，视比特币为对冲财政赤字/债务螺旋/渐进印钞的最佳资产之一、与黄金互补，建议配置5-10%以上。其\"Orange Juice\"比特币国库项目已募资4000万美元。",
       "highlights": [
-        "7/16：Orange Juice Holdings 完成4000万美元种子轮，收购现金流为正美国小企业、留存收益转比特币储备",
-        "联合创始人含 Jeff Booth，墨西哥富豪 Ricardo Salinas 领投，目标上市(主街版MicroStrategy)",
-        "从“财政主导”理论走向实盘：经营现金流+BTC储备对抗货币贬值，长期看多2026-27"
+        "8/7：称比特币当前周期投资者信心最低，不预期外部救世主，价值应靠自身结构性特征（流动性/无许可/价值存储）",
+        "四年减半周期失效论：机构ETF改变供需、山寨季消失、减半不再是催化剂，年内基准\"持平到上涨\"",
+        "长期仍看涨，视BTC为对冲债务/印钞资产、与黄金互补，建议配置5-10%以上；Orange Juice项目募资4000万美元"
       ],
-      "returnNote": "2020年起的宏观与比特币框架被广泛验证；Orange Juice 为新建实体、业绩待观察，注意早期风险。",
+      "returnNote": "Alden宏观/BTC研究影响广泛，但BTC价格判断属前瞻性、波动极大（标\"未独立验证\"）；其对M2与BTC近期背离的解释值得关注。",
       "credibility": "高",
       "date": "2026-08-08",
-      "viewDate": "2026-07-16",
-      "source": "CoinDesk / BingX（2026-07-16）",
-      "sourceUrl": "https://bingx.com/en/flash-news/post/lyn-alden-cofounds-orange-juice-holdings-closes-m-seed-round-for-bitcoin-treasury-strategy",
+      "viewDate": "2026-08-07",
+      "source": "Brave New Coin / 头条（2026-08-07）",
+      "sourceUrl": "https://bravenewcoin.com/zh-CN/insights/no-cavalry-for-bitcoin",
       "directions": [
         "黄金 / 避险资产",
         "高质量现金流",
@@ -2769,18 +2769,18 @@ window.DASHBOARD_DATA = {
       "emoji": "🪨",
       "stance": "结构性",
       "theme": "国产算力新范式 · 系统级创新 · 自主可控",
-      "summary": "许愿石7月24日发布《关于牛市市场温度的持续监控报告》：综合居民存款搬家、政策底、情绪与全球科技叙事“东西断裂”多维信号，判断市场处于“牛市下半场·中期调整”，政策底初步确认、市场底正在构筑。其监测显示：4-5月居民存款合计减少约2.05万亿、非银存款增3.61万亿，存款搬家进程约半程；跨界信号(保健品/果汁公司进军算力)触发泡沫中后期指纹但风险已部分释放；风险等级定为“橙色预警”(踏空风险>系统性风险)。",
+      "summary": "许愿石8月5日续发\"市场温度计\"：短期温度28、中长期33，定调\"进攻\"；指出8月4日光模块(CPO)指数、费城半导体指数领涨，AI应用端Palantir盘前一度暴涨超16%（二季报超预期、上调全年营收指引），云计算端Anthropic与挪威数据中心达成100亿美元算力协议，存储端TrendForce称DRAM供不应求延续至2027、HBM4e配置尚未定案。延续其7月\"牛市温度计\"框架：监管降温+海外算力叙事裂痕+居民存款搬家三重信号下，判断牛市尚有\"后半场\"，资金从拥挤硬科技有序分流至消费/创新药/商业航天/人形机器人，科技缩圈而非溃散。",
       "highlights": [
-        "7/24 牛市温度计：牛市下半场中期调整，政策底确认、市场底构筑中",
-        "居民存款4-5月减2.05万亿、非银增3.61万亿，搬家进程约半程",
-        "跨界信号触发泡沫中后期指纹但风险已部分释放；橙色预警(踏空>系统性)"
+        "8/5：市场温度计短期28/中长期33，定调\"进攻\"；8/4光模块(CPO)、费城半导体领涨",
+        "AI应用Palantir盘前一度+16%（二季报超预期、上调指引）；Anthropic签100亿美元算力协议；DRAM供不应求延续至2027",
+        "延续7月框架：监管降温+海外算力裂痕+居民存款搬家，判断牛市有后半场、科技缩圈非溃散"
       ],
-      "returnNote": "雪球人气实战派，以坦诚记录组合与心态著称；偏谨慎，适合作为「过热警示」对照。",
+      "returnNote": "许愿石为雪球个人投资者，温度计为情绪指标非买卖依据（标\"未独立验证\"）；框架偏乐观、需防科技二次探底。",
       "credibility": "中",
       "date": "2026-08-08",
-      "viewDate": "2026-07-24",
-      "source": "许愿石雪球专栏 / 九元公社（2026-07-24）",
-      "sourceUrl": "https://www.jiuyangongshe.com/a/jum60p33dk",
+      "viewDate": "2026-08-05",
+      "source": "雪球 / 许愿石（2026-08-05）",
+      "sourceUrl": "https://xueqiu.com/3953199771/403777521",
       "directions": [
         "AI算力基础设施",
         "红利 / 低估值 / 防御板块"
